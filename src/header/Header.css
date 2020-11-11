@@ -1,0 +1,17 @@
+.logo {
+    text-align: center;
+}
+section#header {
+    border-bottom: 2px solid black;
+}
+button.subscription {
+    background: #fff;
+    border: 1px solid #000;
+    font-size: 14px;
+    margin-left: 3px;
+}
+.row.headerbtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}

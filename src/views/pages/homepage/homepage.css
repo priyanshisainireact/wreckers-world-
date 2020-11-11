@@ -1,0 +1,59 @@
+
+h2.news-heading {
+    padding: 7px 14px 0px 0;
+    font-size: 28px;
+    font-family: "Times New Roman",Times,serif;
+    font-weight: 900;
+    margin: 0 0 0px;
+    margin-left: 62px;
+}
+h2.news-heading:after {
+    width: 45px;
+    height: 13px;
+    background-color: #4dbc15;
+    left: 0px;
+    top: 18px;
+    position: absolute;
+    content: "";
+}
+h2.bidtitle {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 3%;
+    font-weight: 700;
+}
+p {
+    font-size: 13px;
+    margin: 0px;
+}
+.biddetails {
+    text-align: center;
+}
+span {
+    font-weight: 600;
+}
+.bid-card {
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    margin-top: 8px;
+}
+h2.newlaunchtitle {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.col-lg-3.cities-card {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+}
+h4.city-name {
+    font-size: 14px;
+
+}
+p.yardcount {
+    color: #4dbc15;
+}
+img {
+    height: 100%;
+    width: 100%;
+}

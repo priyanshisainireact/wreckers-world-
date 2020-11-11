@@ -1,0 +1,42 @@
+// Here you can add other styles
+.bg-primary {
+    background-color: #4dbc15 !important;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #4dbc15;
+    border-color: #4dbc15;
+}
+button.mt-3.btn.btn-primary.active {
+    border: 1px solid #fff;
+}
+button.mt-3.btn.btn-primary.active {
+    border: 1px solid #fff;
+    background: #4dbc15;
+}
+.btn-link {
+    font-weight: 400;
+    color: #4dbc15;
+    text-decoration: none;
+}
+.btn-success {
+    display: block;
+    border-color: #4dbc15;
+    background: #4dbc15;
+}
+.c-sidebar .c-sidebar-nav-link.c-active, .c-sidebar .c-active.c-sidebar-nav-dropdown-toggle {
+    color: #fff;
+    background: #4dbc15;
+}
+.c-sidebar .c-sidebar-nav-link:hover, .c-sidebar .c-sidebar-nav-dropdown-toggle:hover {
+    color: #fff;
+    background: #4dbc15;
+}
+li.c-header-nav-item.mx-2.dropdown.nav-item {
+    display: none;
+}
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #4dbc15;
+}
