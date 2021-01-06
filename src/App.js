@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
-// import { HashRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // import './scss/style.scss';
 import Header from './header/Header';
+import Footer from './footer/Footer';
 import Homepage from './views/pages/homepage/Homepage';
+import BasicForms from './views/pages/yardlisting/form';
+// import YardDetails from './views/pages/yardlisting/YardDetails';
+import YardListing from './views/pages/yardlisting/YardListing';
+import DetailsPage from './views/pages/yardlisting/DetailsPage';
+import Login from './views/pages/login/Login';
+import Register from './views/pages/register/Register';
+import Subscription from './views/pages/subscription/Subscription';
+import CaruserProfile from './views/pages/profile/Caruserprofile';
 // const loading = (
 //   <div className="pt-3 text-center">
 //     <div className="sk-spinner sk-spinner-pulse"></div>
@@ -16,29 +25,54 @@ import Homepage from './views/pages/homepage/Homepage';
 // const Login = React.lazy(() => import('./views/pages/login/Login'));
 // const Register = React.lazy(() => import('./views/pages/register/Register'));
 // const Page404 = React.lazy(() => import('./views/pages/page404/Page404'));
-// const Page500 = React.lazy(() => import('./views/pages/page500/Page500'));
+//  const Page500 = React.lazy(() => import('./views/pages/page500/Page500'));
+//  const Page500 = React.lazy(() => import('./views/pages/page500/Page500'));
+// class App extends Component {
 
-class App extends Component {
+//   render() {
+//     return (
+//       // <HashRouter>
+//       //     <React.Suspense fallback={loading}>
+//       //       <Switch>
+//       //         <Route exact path="/login" name="Login Page" render={props => <Login {...props}/>} />
+//       //         <Route exact path="/register" name="Register Page" render={props => <Register {...props}/>} />
+//       //         <Route exact path="/404" name="Page 404" render={props => <Page404 {...props}/>} />
+//       //         <Route exact path="/500" name="Page 500" render={props => <Page500 {...props}/>} />
+//       //         <Route path="/" name="Home" render={props => <TheLayout {...props}/>} />
+//       //       </Switch>
+//       //     </React.Suspense>
+//       // </HashRouter>
+//       <>
+//        <Header/>
+//       <Homepage/>
+//       <BasicForms />
+//       </>
+//     );
+//   }
+// }
 
-  render() {
-    return (
-      // <HashRouter>
-      //     <React.Suspense fallback={loading}>
-      //       <Switch>
-      //         <Route exact path="/login" name="Login Page" render={props => <Login {...props}/>} />
-      //         <Route exact path="/register" name="Register Page" render={props => <Register {...props}/>} />
-      //         <Route exact path="/404" name="Page 404" render={props => <Page404 {...props}/>} />
-      //         <Route exact path="/500" name="Page 500" render={props => <Page500 {...props}/>} />
-      //         <Route path="/" name="Home" render={props => <TheLayout {...props}/>} />
-      //       </Switch>
-      //     </React.Suspense>
-      // </HashRouter>
-      <>
-       <Header/>
-      <Homepage/>
-      </>
-    );
-  }
+const App = () =>{
+  return(
+  <div>
+    
+    <BrowserRouter>
+    <Header/>
+    <Switch>
+        <Route exact path="/" component={Homepage} />
+        <Route exact path="/homepage"><Homepage/></Route>
+        <Route exact path="/listyouryard"><BasicForms/></Route> 
+        <Route exact path="/yardlisting"><YardListing/></Route> 
+        <Route exact path="/detailpage"><DetailsPage/></Route>
+        <Route exact path="/login"><Login/></Route> 
+        <Route exact path="/register"><Register/></Route> 
+        <Route exact path="/subscription"><Subscription/></Route> 
+        <Route exact path="/caruserprofile"><CaruserProfile/></Route> 
+      </Switch>
+    </BrowserRouter>
+    <Footer/>
+  </div>
+
+  )
 }
-
+  
 export default App;

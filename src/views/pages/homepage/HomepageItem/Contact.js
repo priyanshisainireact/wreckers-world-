@@ -5,10 +5,10 @@ class Contact extends Component{
         return(
 
             <div className="Contact">
-            <p>WE CREATED SPECIAL SITE YOU CAN</p>
-            <p><span>Get in Touch,</span>with wreckers world team</p>
-            <p>and let Us know how we can help</p>
-            <button type="button">Contact Us</button>
+            <p className="contacthead">WE CREATED SPECIAL SITE YOU CAN</p>
+            <p className="contacthead"><span className="boldspan">Get in Touch,</span>with wreckers world team</p>
+            <p  className="contacthead">and let Us know how we can help</p>
+            <button type="button" className="contactbtn">Contact Us</button>
             </div>
 
         )

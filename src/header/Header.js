@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Header.css';
+import {Link} from 'react-router-dom';
+
 class Header extends Component{
     render(){
         return(
@@ -11,7 +13,7 @@ class Header extends Component{
         
         <button className="subscription"> List Your Yard </button>
         <button className="subscription" > List Your Car </button>
-        <button className="subscription" > Login/Logout </button>
+      <Link to="/Login"><button className="subscription" > Login/Logout </button></Link>  
         </div>
 
 

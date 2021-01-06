@@ -5,7 +5,7 @@ h2.news-heading {
     font-family: "Times New Roman",Times,serif;
     font-weight: 900;
     margin: 0 0 0px;
-    margin-left: 62px;
+    margin-left: 48px;
 }
 h2.news-heading:after {
     width: 45px;
@@ -32,11 +32,11 @@ p {
 span {
     font-weight: 600;
 }
-.bid-card {
+/* .bid-card {
     border: 1px solid #e1e1e1;
     padding: 10px;
     margin-top: 8px;
-}
+} */
 h2.newlaunchtitle {
     font-size: 12px;
     font-weight: 600;
@@ -56,4 +56,83 @@ p.yardcount {
 img {
     height: 100%;
     width: 100%;
+}
+.bidrow{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    /* border: 1px solid #e6e6e6; */
+ 
+}
+.bidcol-1 {
+    padding: 0px 0px 8px 0px;
+    width: 50%;
+}
+.bidnow {
+    margin-top: 20px;
+}
+.bid-card {
+    border-right: 1px solid #dee2e6;
+}
+h2.bidtitlecol {
+    font-size: 14px;
+    font-weight: 700;
+}
+a {
+    font-size: 13px;
+    color: #000000;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.newlaunch {
+    border-right: 1px solid #dee2e6;
+}
+.newlaunchsection {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 20px;
+}
+.eventsection {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 18px;
+}
+.newssection {
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid #dee2e6;
+}
+.learnmore {
+    background: #4dbc15;
+    border: none;
+    font-size: 13px;
+    color: #fff;
+    height: 30px;
+    margin-top: 10px;
+    width: 120px;
+}
+.Contact {
+    background: #4dbc15;
+    color: #fff;
+    text-align: center;
+    padding: 4%;
+    border-radius: 18px;
+    margin-top: -20px;
+}
+.boldspan {
+    font-size: 30px;
+}
+.contactbtn {
+    background: #fff;
+    border: none;
+    width: 120px;
+    font-size: 14px;
+    height: 30px;
+    margin-top: 10px;
+}
+.processbg {
+    background: #dee2e652;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.row {
+    position: relative;
 }

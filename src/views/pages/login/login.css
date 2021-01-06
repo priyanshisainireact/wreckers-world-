@@ -1,0 +1,18 @@
+.text-white.bg-login.py-5.d-md-down-none.card {
+    background: #51bd1b;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #51bd1b;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+button.px-4.btn.btn-primary {
+    background: #51bd1b;
+    border: 1px solid #51bd1b;
+}
+button.px-0.btn.btn-link {
+    color: #51bd1b;
+}
+.card-group {
+    margin: 65px 0px 65px 0px;
+}

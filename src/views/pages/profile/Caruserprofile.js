@@ -1,69 +1,75 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './profile.css';
 
-class BiddingItem extends Component{
-    render(){
-        return(
-            <div className="row bidnow">
-<div className="col-lg-6">
-                            <div className="bid-card">
-                            <img src={'./avatars/bidcar.jpg'} style={{height:'100%',width:'100%'}} />
-                            
-                                <h2 className="bidtitle">Lorem Ipsum</h2>
-                                
-                                <div className="biddetails">
-                                    <p><span>Current Price :</span> 200</p>
-                                    <p><span>Bids Placed :</span> No bids placed</p>
-                                    <p><span>Ending :</span> 1 day</p>
-                                </div>
-                            </div>
-                          </div>
-                      <div className="col-lg-6">
-                              <div className="bidrow">
-                                  <div class="bidcol-1">
+class CaruserProfile extends Component{
+    render() {
+        return (
+
+        <div className="container">
+            <div class="row"><h2 class="news-heading">Heading !</h2></div>
+          <div className="row">
+              <div className="col-lg-8">
+               <div className="usercarlist">
+               <div className="caruserbidrow">
+                                  <div class="caruserbidcol-1">
                                   <img src={'./avatars/bidcar.jpg'} style={{height:'100%',width:'100%'}} />
                                   </div>
-                                  <div class="bidcol-1">
+                                  <div class="caruserbidcol-2">
                                   <div className="biddetailscol">
                                   <h2 className="bidtitlecol">Lorem Ipsum</h2>
                                     <p><span>Current Price :</span> 200</p>
                                     <p><span>Bids Placed :</span> No bids placed</p>
                                     <p><span>Ending :</span> 1 day</p>
+                                    <button type="button" className="managebtn">Manage Detail</button>
                                 </div> 
                                   </div>
                               </div>
-                              <div className="bidrow">
-                                  <div class="bidcol-1">
+                              <div className="caruserbidrow">
+                                  <div class="caruserbidcol-1">
                                   <img src={'./avatars/bidcar.jpg'} style={{height:'100%',width:'100%'}} />
                                   </div>
-                                  <div class="bidcol-1">
+                                  <div class="caruserbidcol-2">
                                   <div className="biddetailscol">
                                   <h2 className="bidtitlecol">Lorem Ipsum</h2>
                                     <p><span>Current Price :</span> 200</p>
                                     <p><span>Bids Placed :</span> No bids placed</p>
                                     <p><span>Ending :</span> 1 day</p>
+                                    <button type="button" className="managebtn">Manage Detail</button>
                                 </div> 
                                   </div>
                               </div>
-                              <div className="bidrow">
-                                  <div class="bidcol-1">
+                              <div className="caruserbidrow">
+                                  <div class="caruserbidcol-1">
                                   <img src={'./avatars/bidcar.jpg'} style={{height:'100%',width:'100%'}} />
                                   </div>
-                                  <div class="bidcol-1">
+                                  <div class="caruserbidcol-2">
                                   <div className="biddetailscol">
                                   <h2 className="bidtitlecol">Lorem Ipsum</h2>
                                     <p><span>Current Price :</span> 200</p>
                                     <p><span>Bids Placed :</span> No bids placed</p>
                                     <p><span>Ending :</span> 1 day</p>
+                                    <button type="button" className="managebtn">Manage Detail</button>
                                 </div> 
                                   </div>
                               </div>
-                      </div>  
-            </div>
-  
-                          
-                          
+               </div>
+              </div>
+              <div className="col-lg-4">
+                  <div className="usercarlist">
+                   <div className="profilename">
+                   <img src={'./avatars/download.png'} className="circleimg"/>
+                   <h2 className="username">User Name</h2>
+                   </div>
+                  
+
+                  </div>
+              </div>
+          </div>
+        </div>
+
+
         )
     }
 }
 
-export default BiddingItem;
+export default CaruserProfile;

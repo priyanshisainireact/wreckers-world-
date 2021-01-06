@@ -1,0 +1,35 @@
+section#footer {
+    background-color: #000;
+    color: #fff;
+    padding: 18px 0px 18px 0px;
+}
+.footerli {
+    list-style: none;
+    line-height: 30px;
+    font-size: 13px;
+    text-decoration: underline;
+}
+section#footerbottom {
+    background: #000000eb !important;
+}
+.footer-li {
+    display: inline;
+    padding: 7px;
+    color: #4dbc15;
+    font-size: 13px;
+}
+.footer-heading {
+    font-weight: 100;
+    color: #fff;
+    margin-top: 10px;
+    padding-left: 1%;
+}
+.footer-heading:after {
+    width: 38px;
+    height: 2px;
+    background-color: #4dbc15;
+    left: 28px;
+    top: 30px;
+    position: absolute;
+    content: "";
+}

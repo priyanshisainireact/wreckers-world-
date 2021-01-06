@@ -1,0 +1,63 @@
+.subscriptioncol {
+    margin: 30px 0px 30px 0px;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+}
+h3.plantype {
+    font-size: 20px;
+}
+h3.plantype:after {
+    width: 44px;
+    height: 3px;
+    background-color: #4dbc15;
+    left: 20px;
+    top: 46px;
+    position: absolute;
+    content: "";
+}
+button.subscriptionbtn {
+    background: #4dbc15;
+    border: none;
+    font-size: 13px;
+    color: #fff;
+    height: 30px;
+    margin-top: 10px;
+    width: 100%;
+}
+span.currency {
+    font-weight: 100;
+  
+}
+h1.planprice {
+    font-weight: 900;
+    font-size: 60px;
+}
+p.billed {
+    font-size: 15px;
+}
+.uppersection {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 21px;
+}
+.lowersection {
+    margin-top: 20px;
+}
+li.planlist {
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 3em;
+    list-style: circle;
+}
+.subscriptioncol:nth-child(3) {
+    background: #4dbc1536;
+}
+.middlesection {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0px 20px 0px;
+}
+.plantext{
+    line-height: 2;
+    font-size: 15px;
+    margin: 0px;
+    font-weight: 600;
+}

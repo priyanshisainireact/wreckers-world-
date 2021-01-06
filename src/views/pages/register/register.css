@@ -1,0 +1,16 @@
+.btn-success{
+    color: #fff;
+    background-color: #52bd1b;
+    border-color: #52bd1b;
+}
+button.btn-facebook.mb-1.btn.btn-block {
+    background-color: #1877f2;
+    color: #fff;
+}
+button.btn-twitter.mb-1.btn.btn-block {
+    background-color: rgb(29 161 242);
+    color: #fff;
+}
+.mx-4.card {
+    margin: 50px 0px 50px 0px;
+}

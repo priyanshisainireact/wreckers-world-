@@ -1,4 +1,5 @@
 import React from 'react'
+import './register.css';
 import {
   CButton,
   CCard,
@@ -11,7 +12,8 @@ import {
   CInputGroup,
   CInputGroupPrepend,
   CInputGroupText,
-  CRow
+  CRow,CSelect
+
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
@@ -40,6 +42,39 @@ const Register = () => {
                     </CInputGroupPrepend>
                     <CInput type="text" placeholder="Email" autoComplete="email" />
                   </CInputGroup>
+
+                  <CInputGroup className="mb-3">
+                    <CInputGroupPrepend>
+                      <CInputGroupText>
+                        <CIcon name="cil-phone" />
+                      </CInputGroupText>
+                    </CInputGroupPrepend>
+                    <CInput type="tel" placeholder="Phone No" autoComplete="phone" />
+                  </CInputGroup>
+
+
+
+                  <CInputGroup className="mb-3">
+                    <CInputGroupPrepend>
+                      <CInputGroupText>
+                        <CIcon name="cil-lock-locked" />
+                      </CInputGroupText>
+                    </CInputGroupPrepend>
+                    <CSelect custom name="select" id="select">
+                      <option value="0">Please select your account type</option>
+                      <option value="1">Car Listing</option>
+                      <option value="2">Yard Listing</option>
+                    
+                    </CSelect>
+                  </CInputGroup>
+
+
+
+                  
+          
+
+
+
                   <CInputGroup className="mb-3">
                     <CInputGroupPrepend>
                       <CInputGroupText>
@@ -65,7 +100,7 @@ const Register = () => {
                     <CButton className="btn-facebook mb-1" block><span>facebook</span></CButton>
                   </CCol>
                   <CCol xs="12" sm="6">
-                    <CButton className="btn-twitter mb-1" block><span>twitter</span></CButton>
+                    <CButton className="btn-twitter mb-1" block><span>google</span></CButton>
                   </CCol>
                 </CRow>
               </CCardFooter>

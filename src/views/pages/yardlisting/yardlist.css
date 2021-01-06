@@ -1,0 +1,105 @@
+.listing {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    border: 1px solid #e6e6e6;
+    margin-top: 20px;
+  }
+  p {
+    line-height: 2;
+    font-size: 13px;
+    margin: 0px;
+}
+  .yardlogo {
+    padding: 10px;
+    width: 25%;
+}
+  
+  .yarddetail {
+    width: 75%;
+    padding: 10px;
+    color: #505050;
+  }
+  img {
+    width: 100%;
+    /* border-right: 1px solid #e6e6e6; */
+    padding-right: 20px;
+}
+h2.yardname {
+    font-size: 16px;
+}
+input[type="text"] {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    /* margin-top: 20px; */
+    height: 40px;
+    /* font-size: 13px; */
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  padding: 10px;
+  margin: 2px;
+}
+.fa-twitter{
+  background: #55ACEE;
+  color: white;
+  padding: 10px;
+  margin: 2px;
+}
+.fa-pinterest{
+  background: #cb2027;
+  color: white;
+  padding: 10px;
+  margin: 2px;
+}
+.fa-linkedin{
+  background: #007bb5;
+  color: white;
+  padding: 10px;
+  margin: 2px;
+}
+.detailpictures{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  
+  margin-top: 15px;
+}
+.pictureone{
+  padding: 10px;
+  width: 25%;
+}
+h2.Detail-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 45px;
+}
+.socialmedia {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 20px;
+  border-top: 1px solid #e6e6e6;
+  padding-top: 20px;
+}
+ul.formlist {
+  line-height: 2;
+  color: #636161;
+  font-size: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 20px;
+}
+img.relatedimage {
+  height: 100px;
+}
+h3.relateditemheading {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 18px;
+  color: #505050;
+}
+
+.contacthead {
+  font-size: 22px;
+}
