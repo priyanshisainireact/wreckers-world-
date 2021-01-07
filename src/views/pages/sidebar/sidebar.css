@@ -1,0 +1,24 @@
+.sidebar {
+    margin-top: 25px;
+}
+
+.sidebar.title {
+    font-size: 21px;
+    font-weight: 600;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 14px;
+    margin-bottom: 15px;
+}
+.sidebar.title:after {
+    content: ' ';
+    width: 75px;
+    border-bottom: 2px solid #4dbc15;
+    display: block;
+    position: absolute;
+    top: 63px;
+}
+.sidebarlist {
+    text-decoration: underline;
+    list-style: none;
+    line-height: 2em;
+}

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Footer.css';
+import {Link} from 'react-router-dom';
+import SubscriptionForm from '../views/pages/subscription/SubscriptionForm';
 class Footer extends Component{
     render(){
         return(
@@ -14,14 +16,14 @@ class Footer extends Component{
                   A vehicle enthusiast would get news on Vehicles, New Launches, Events and Blogs, a Wrecker can list their business, provide visibility to their business, Car owners can list their Cars for Sell, Recyclers can connect with Wreckers world wide.</p>
                 </div>
                 <div className="col-lg-4">
-                    
+                    <SubscriptionForm/>
                 </div>
                 <div className="col-lg-4">
                     <ul>
                         <li className="footerli">Home</li>
                         <li className="footerli">About Us</li>
-                        <li className="footerli">Car Listing</li>
-                        <li className="footerli">Yard Listing</li>
+                       <Link to="/carlisting"><li className="footerli">Car Listing</li></Link> 
+                       <Link to="/yardlisting"> <li className="footerli">Yard Listing</li></Link> 
                         <li className="footerli">Privacy Policy</li>
                         <li className="footerli">Terms and Conditions</li>
                         <li className="footerli">Selling a Car</li>

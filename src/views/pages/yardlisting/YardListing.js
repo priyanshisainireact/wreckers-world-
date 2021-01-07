@@ -1,6 +1,7 @@
 import React from 'react';
 import './yardlist.css';
-
+import {Link} from 'react-router-dom';
+import Sidebar from '../sidebar/Sidebar'
 class YardListing extends React.Component{
     render(){
         return(
@@ -8,7 +9,10 @@ class YardListing extends React.Component{
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8">
-                    <h2 className="news-heading">Yard Listing</h2>  
+                        <div className="row">
+                        <h2 className="news-heading">Yard Listing</h2>  
+                        </div>
+                   
                     <div className="searchbycity">
                     <input type="text" placeholder="Search By City" name="search">
       
@@ -24,14 +28,16 @@ class YardListing extends React.Component{
                     <p className="email"><i class="fa fa-envelope" aria-hidden="true"></i> samircarremoval@gmail.com</p>
                     <p className="phone"><i class="fa fa-phone" aria-hidden="true"></i> 0402 639 249</p>
                     <p className="address"><i class="fa fa-location-arrow"></i> 1/48, Pendlebury Road, Cardiff, 2285, Newcastle, New South Wales</p>
-                    <p className="link" >Read More</p>
+                    <Link to="/detailpage">  <p className="link" >Read More</p></Link>
                    </div>
                     </div>
                     </div>
                 
 
 <div className="col-lg-4">
-
+<Sidebar/>
+         <Sidebar/>
+         <img src={'./avatars/Banner.png'} style={{height:'auto',width:'60%'}} />
 </div>
 
 

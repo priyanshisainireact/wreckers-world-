@@ -41,4 +41,26 @@ h2.username {
     font-size: 28px;
     padding-top: 20px;
     font-weight: 700;
-}         
+}  
+.Personaldetails {
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid #e2e2e2;
+}   
+p.edit {
+    font-size: 18px;
+}    
+i.fa.fa-pencil-square-o {
+    color: #4dbc15;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #4dbc15;
+    margin: 0px 0px 20px 0px;
+}
+a:hover {
+    color: #4dbc15;
+}
+ul.nav.nav-pills {
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 25px;
+}

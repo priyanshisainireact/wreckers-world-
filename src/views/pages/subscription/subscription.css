@@ -61,3 +61,18 @@ li.planlist {
     margin: 0px;
     font-weight: 600;
 }
+h1.subscribeus {
+    color: #000;
+    text-align: center;
+    font-size: 22px;
+    margin: 10px 0px 20px 0px;
+    font-weight: 600;
+}
+.cardbodypadding {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+.subscribtn {
+    width: 100%;
+}

@@ -4,6 +4,7 @@ section#footer {
     padding: 18px 0px 18px 0px;
 }
 .footerli {
+    color: #fff;
     list-style: none;
     line-height: 30px;
     font-size: 13px;

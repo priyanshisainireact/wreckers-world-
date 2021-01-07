@@ -12,6 +12,12 @@ import Login from './views/pages/login/Login';
 import Register from './views/pages/register/Register';
 import Subscription from './views/pages/subscription/Subscription';
 import CaruserProfile from './views/pages/profile/Caruserprofile';
+import YarduserProfile from './views/pages/profile/Yarduserprofile';
+import Forgot from './views/pages/forgotpassword/ForgotPassword';
+import BidForm from './views/pages/bidding/BidForm';
+import CarListing from './views/pages/bidding/CarListing';
+import CarDetail from './views/pages/bidding/CarDetail';
+import ResetPassword from './views/pages/forgotpassword/ResetPassword';
 // const loading = (
 //   <div className="pt-3 text-center">
 //     <div className="sk-spinner sk-spinner-pulse"></div>
@@ -67,9 +73,16 @@ const App = () =>{
         <Route exact path="/register"><Register/></Route> 
         <Route exact path="/subscription"><Subscription/></Route> 
         <Route exact path="/caruserprofile"><CaruserProfile/></Route> 
+        <Route exact path="/yarduserprofile"><YarduserProfile/></Route> 
+         <Route exact path="/forgotpassword"><Forgot/></Route>  
+         <Route exact path="/resetpassword"><ResetPassword/></Route>  
+         <Route exact path="/bidform"><BidForm/></Route>  
+         <Route exact path="/carlisting"><CarListing/></Route>  
+         <Route exact path="/cardetail"><CarDetail/></Route>  
       </Switch>
+      <Footer/>
     </BrowserRouter>
-    <Footer/>
+    
   </div>
 
   )

@@ -11,8 +11,8 @@ class Header extends Component{
                 <div className="row headerbtn">
                 <div className="btn-group">
         
-        <button className="subscription"> List Your Yard </button>
-        <button className="subscription" > List Your Car </button>
+                <Link to="/listyouryard"> <button className="subscription"> List Your Yard </button></Link>  
+                <Link to="/bidform">  <button className="subscription" > List Your Car </button></Link>
       <Link to="/Login"><button className="subscription" > Login/Logout </button></Link>  
         </div>
 
