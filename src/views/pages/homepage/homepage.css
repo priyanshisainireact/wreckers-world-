@@ -136,3 +136,41 @@ a {
 .row {
     position: relative;
 }
+.searchsubmit {
+    position: absolute;
+    padding: 8px;
+    border: none;
+    right: 0%;
+    width: 50px;
+}
+.searchbycity {
+    margin-top: 20px;
+    padding: 20px 0px 20px 0px;
+    background: #f4f6f7;
+}
+.citywrecker {
+    
+    padding: 0px 0px 20px 0px;
+    border-bottom: 1px solid #dee2e6;
+}
+.view {
+    color: #4dbc15;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

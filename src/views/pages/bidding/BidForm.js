@@ -53,45 +53,50 @@ const BidForm = () => {
             <CCardBody>
               <CForm action="" method="post" encType="multipart/form-data" className="form-horizontal">
                 <CFormGroup row>
-                  <CCol md="3">
+                  {/* <CCol md="3">
                     <CLabel htmlFor="text-input">Car details  *</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  </CCol> */}
+                  <CCol xs="12" md="9" lg="6">
                     <CInput id="text-input" name="text-input" placeholder="Enter Make, Model, Year of Manufacture" />
                
                   </CCol>
-                </CFormGroup>
-
-                <CFormGroup row>
-                  <CCol md="3">
-                    <CLabel htmlFor="text-input">Name*</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  <CCol xs="12" md="9"lg="6">
                     <CInput id="text-input" name="text-input" placeholder="Enter Name" />
                
                   </CCol>
                 </CFormGroup>
 
+                {/*<CFormGroup row>
+                   <CCol md="3">
+                    <CLabel htmlFor="text-input">Name*</CLabel>
+                  </CCol> 
+                  <CCol xs="12" md="9">
+                    <CInput id="text-input" name="text-input" placeholder="Enter Name" />
+               
+                  </CCol>
+                </CFormGroup>*/}
+
 
 
                 <CFormGroup row>
-                  <CCol md="3">
+                  {/* <CCol md="3">
                     <CLabel htmlFor="text-input">Phone Number*</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  </CCol> */}
+                  <CCol xs="12" md="9"lg="6">
                     <CInput id="text-input" name="text-input" placeholder="Enter Phone Number" />
                
                   </CCol>
-                </CFormGroup>
-                <CFormGroup row>
-                  <CCol md="3">
-                    <CLabel htmlFor="email-input">Email Address *</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  <CCol xs="12" md="9"lg="6">
                     <CInput type="email" id="email-input" name="email-input" placeholder="Enter Email" autoComplete="email"/>
   
                   </CCol>
                 </CFormGroup>
+                 {/* <CFormGroup row>
+                 <CCol md="3">
+                    <CLabel htmlFor="email-input">Email Address *</CLabel>
+                  </CCol> 
+                  
+                </CFormGroup>*/}
                
                 {/* <CFormGroup row>
                   <CCol md="3">
@@ -104,10 +109,10 @@ const BidForm = () => {
                 
                 
                 <CFormGroup row>
-                  <CCol md="3">
+                  {/* <CCol md="3">
                     <CLabel htmlFor="select">Select Country *</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  </CCol> */}
+                  <CCol xs="12" md="9"lg="6">
                     <CSelect custom name="select" id="select">
                       <option value="0">Please select your country</option>
                       <option value="1">Option #1</option>
@@ -115,12 +120,7 @@ const BidForm = () => {
                       <option value="3">Option #3</option>
                     </CSelect>
                   </CCol>
-                </CFormGroup>
-                <CFormGroup row>
-                  <CCol md="3">
-                    <CLabel htmlFor="select">Select State *</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  <CCol xs="12" md="9"lg="6">
                     <CSelect custom name="select" id="select">
                       <option value="0">Please select your state</option>
                       <option value="1">Option #1</option>
@@ -129,11 +129,17 @@ const BidForm = () => {
                     </CSelect>
                   </CCol>
                 </CFormGroup>
+                {/*<CFormGroup row>
+                   <CCol md="3">
+                    <CLabel htmlFor="select">Select State *</CLabel>
+                  </CCol> 
+                 
+                </CFormGroup>*/}
                 <CFormGroup row>
-                  <CCol md="3">
+                  {/* <CCol md="3">
                     <CLabel htmlFor="select">Select City *</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  </CCol> */}
+                  <CCol xs="12" md="9"lg="6">
                     <CSelect custom name="select" id="select">
                       <option value="0">Please select your city</option>
                       <option value="1">Option #1</option>
@@ -141,56 +147,59 @@ const BidForm = () => {
                       <option value="3">Option #3</option>
                     </CSelect>
                   </CCol>
-                </CFormGroup>
-                
-                <CFormGroup row>
-                  <CCol md="3">
-                    <CLabel htmlFor="text-input">VIN Number</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  <CCol xs="12" md="9"lg="6">
                     <CInput id="text-input" name="text-input" placeholder="Enter VIN Number " />
                
                   </CCol>
                 </CFormGroup>
+                
+                {/* <CFormGroup row>
+                  <CCol md="3">
+                    <CLabel htmlFor="text-input">VIN Number</CLabel>
+                  </CCol> 
+                  
+                </CFormGroup>*/}
 
 
 
                 <CFormGroup row>
-                  <CCol md="3">
+                  {/* <CCol md="3">
                     <CLabel htmlFor="text-input">Opening Price</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  </CCol> */}
+                  <CCol xs="12" md="9"lg="6">
                     <CInput id="text-input" name="text-input" placeholder="Enter Opening Price " />
                
                   </CCol>
-                </CFormGroup>
-                <CFormGroup row>
-                  <CCol md="3">
-                    <CLabel htmlFor="text-input">Lowest Price to Accept</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  <CCol xs="12" md="9"lg="6">
                     <CInput id="text-input" name="text-input" placeholder="Enter Lowest Price to Accept " />
                
                   </CCol>
                 </CFormGroup>
+               {/* <CFormGroup row>
+                   <CCol md="3">
+                    <CLabel htmlFor="text-input">Lowest Price to Accept</CLabel>
+                  </CCol> 
+                 
+                </CFormGroup>*/}
                 <CFormGroup row>
-                  <CCol md="3">
+                  {/* <CCol md="3">
                     <CLabel htmlFor="text-input">Incremental Value</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  </CCol> */}
+                  <CCol xs="12" md="9"lg="6">
                     <CInput id="text-input" name="text-input" placeholder="Enter Incremental Value" />
                
                   </CCol>
-                </CFormGroup>
-                <CFormGroup row>
-                  <CCol md="3">
-                    <CLabel htmlFor="text-input">Ending Date</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  <CCol xs="12" md="9"lg="6">
                     <CInput id="text-input" name="text-input" placeholder="Enter Ending Date" />
                
                   </CCol>
                 </CFormGroup>
+                {/*   <CFormGroup row>
+                <CCol md="3">
+                    <CLabel htmlFor="text-input">Ending Date</CLabel>
+                  </CCol> 
+                 
+                </CFormGroup>*/}
 
 
 
@@ -207,20 +216,14 @@ const BidForm = () => {
 
 
                 <CFormGroup row>
-                  <CCol md="3">
+                  {/* <CCol md="3">
                     <CLabel htmlFor="text-input">Services provided by the business</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  </CCol> */}
+                  <CCol xs="12" md="9"lg="6">
                     <CInput id="text-input" name="text-input" placeholder="Enter Services provided by the business" />
                
                   </CCol>
-                </CFormGroup>
-                
-                <CFormGroup row>
-                  <CCol md="3">
-                    <CLabel>Pictures Of Car</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  <CCol xs="12" md="9"lg="6">
                     <CInputFile 
                       id="file-multiple-input" 
                       name="file-multiple-input" 
@@ -232,11 +235,18 @@ const BidForm = () => {
                     </CLabel>
                   </CCol>
                 </CFormGroup>
+                
+                {/*  <CFormGroup row>
+                 <CCol md="3">
+                    <CLabel>Pictures Of Car</CLabel>
+                  </CCol> 
+                 
+                </CFormGroup>*/}
                 <CFormGroup row>
-                  <CCol md="3">
+                  {/* <CCol md="3">
                     <CLabel htmlFor="select">Payment Method *</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  </CCol> */}
+                  <CCol xs="12" md="9"lg="12">
                     <CSelect custom name="select" id="select">
                       <option value="0">Please select your Payment Method</option>
                       <option value="1">Option #1</option>
@@ -246,10 +256,10 @@ const BidForm = () => {
                   </CCol>
                 </CFormGroup>
                 <CFormGroup row>
-                  <CCol md="3">
+                  {/* <CCol md="3">
                     <CLabel htmlFor="textarea-input">Additional Information</CLabel>
-                  </CCol>
-                  <CCol xs="12" md="9">
+                  </CCol> */}
+                  <CCol xs="12" md="9"lg="12">
                     <CTextarea 
                       name="textarea-input" 
                       id="textarea-input" 
@@ -272,7 +282,7 @@ const BidForm = () => {
    
     
        </div>
-       <div className="col-lg-4">
+       <div className="col-lg-4"lg="6">
        <Sidebar/>
          <Sidebar/>
          <img src={'./avatars/Banner.png'} style={{height:'auto',width:'60%'}} />
