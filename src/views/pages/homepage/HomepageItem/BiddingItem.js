@@ -14,6 +14,7 @@ class BiddingItem extends Component{
                                     <p><span>Current Price :</span> 200</p>
                                     <p><span>Bids Placed :</span> No bids placed</p>
                                     <p><span>Ending :</span> 1 day</p>
+                                    <p className="view">View More</p>
                                 </div>
                             </div>
                           </div>
@@ -28,6 +29,7 @@ class BiddingItem extends Component{
                                     <p><span>Current Price :</span> 200</p>
                                     <p><span>Bids Placed :</span> No bids placed</p>
                                     <p><span>Ending :</span> 1 day</p>
+                                    <p className="view">View More</p>
                                 </div> 
                                   </div>
                               </div>
@@ -41,6 +43,7 @@ class BiddingItem extends Component{
                                     <p><span>Current Price :</span> 200</p>
                                     <p><span>Bids Placed :</span> No bids placed</p>
                                     <p><span>Ending :</span> 1 day</p>
+                                    <p className="view">View More</p>
                                 </div> 
                                   </div>
                               </div>
@@ -54,6 +57,7 @@ class BiddingItem extends Component{
                                     <p><span>Current Price :</span> 200</p>
                                     <p><span>Bids Placed :</span> No bids placed</p>
                                     <p><span>Ending :</span> 1 day</p>
+                                    <p className="view">View More</p>
                                 </div> 
                                   </div>
                               </div>

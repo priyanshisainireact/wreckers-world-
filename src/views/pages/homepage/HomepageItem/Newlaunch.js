@@ -16,8 +16,8 @@ import React, { Component } from 'react';
 
 
 class NewLaunch extends Component {
-    constructor() {
-      super();
+    constructor(props) {
+      super(props);
       this.state = {
         recentBlogPost: {
           name: '',
@@ -37,13 +37,14 @@ class NewLaunch extends Component {
               recentBlogPost: {
                 name: myObj.items[i].title,
                 url: myObj.items[i].link,
+                enclosure: myObj.items[i].enclosure.link,
                 thumbnail: myObj.items[i].thumbnail
               }
             });
           }
         }
       }
-      request.open("GET", "https://api.rss2json.com/v1/api.json?rss_url=https://www.autoblog.com/rss.xml", true);
+      request.open("GET", this.props.url, true);
       request.send();
     }
   
@@ -56,7 +57,7 @@ class NewLaunch extends Component {
         <div>
          
             <a target="_blank" href={this.state.recentBlogPost.url}>{this.state.recentBlogPost.name}</a>
-            <img src={this.state.recentBlogPost.thumbnail}/>
+            <img src={this.state.recentBlogPost.thumbnail || this.state.recentBlogPost.enclosure}/>
         </div>
       );
     }
