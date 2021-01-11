@@ -13,12 +13,12 @@ class Homepage extends Component{
                 <div class="row">
                     <div class="col-lg-2">
                     <img src={'./avatars/Banner.png'} style={{height:'auto',width:'100%'}} />
-                    <img src={'./avatars/grandebannerAd1.png'} style={{height:'auto',width:'100%'}} />
-                    <img src={'./avatars/TahaAuto1.png'} style={{height:'auto',width:'100%'}} />
-                    <img src={'./avatars/VicCarRemovalBanner1.png'} style={{height:'auto',width:'100%'}} />
-                    <img src={'./avatars/viperbannerad1-1.png'} style={{height:'auto',width:'100%'}} />
-                    <img src={'./avatars/Banner.png'} style={{height:'auto',width:'100%'}} />
-                    <img src={'./avatars/Banner.png'} style={{height:'auto',width:'100%'}} />
+                    <img src={'./avatars/grandebannerAd1.png'} style={{height:'auto',width:'100%',marginTop: '20px'}} />
+                    <img src={'./avatars/TahaAuto1.png'} style={{height:'auto',width:'100%',marginTop: '20px'}} />
+                    <img src={'./avatars/VicCarRemovalBanner1.png'} style={{height:'auto',width:'100%',marginTop: '20px'}} />
+                    <img src={'./avatars/viperbannerad1-1.png'} style={{height:'auto',width:'100%',marginTop: '20px'}} />
+                    <img src={'./avatars/WindycityWreckersBanner1.png'} style={{height:'auto',width:'100%',marginTop: '20px'}} />
+                    <img src={'./avatars/WindyWreckersSet2.png'} style={{height:'auto',width:'100%',marginTop: '20px'}} />
                     
                     </div>
                     <div class="col-lg-8">
@@ -181,13 +181,13 @@ class Homepage extends Component{
 
                 </div>
                 <div class="col-lg-2">
-                <img src={'./avatars/Banner.png'} style={{height:'auto',width:'100%'}} />
-                    <img src={'./avatars/Banner.png'} style={{height:'auto',width:'100%'}} />
-                    <img src={'./avatars/Banner.png'} style={{height:'auto',width:'100%'}} />
-                    <img src={'./avatars/Banner.png'} style={{height:'auto',width:'100%'}} />
-                    <img src={'./avatars/Banner.png'} style={{height:'auto',width:'100%'}} />
-                    <img src={'./avatars/Banner.png'} style={{height:'auto',width:'100%'}} />
-                    <img src={'./avatars/Banner.png'} style={{height:'auto',width:'100%'}} />
+                <img src={'./avatars/samirBannerAd1.png'} style={{height:'auto',width:'100%'}} />
+                    <img src={'./avatars/Banner1-3.png'} style={{height:'auto',width:'100%',marginTop: '20px'}} />
+                    <img src={'./avatars/AliCarRemovalBanner1.png'} style={{height:'auto',width:'100%',marginTop: '20px'}} />
+                    <img src={'./avatars/kingautobannerad1.png'} style={{height:'auto',width:'100%',marginTop: '20px'}} />
+                    <img src={'./avatars/Banner1-2.png'} style={{height:'auto',width:'100%',marginTop: '20px'}} />
+                    <img src={'./avatars/banner11.png'} style={{height:'auto',width:'100%',marginTop: '20px'}} />
+                    <img src={'./avatars/TahaAutoSet2.png'} style={{height:'auto',width:'100%',marginTop: '20px'}} />
                     
                     </div>
             </div>
