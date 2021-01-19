@@ -23,7 +23,7 @@ const SubscriptionForm = () => {
       <CContainer>
         <CRow className="justify-content-center">
         
-            <CCardGroup>
+            <CCardGroup className="footersubcard">
               <CCard className="p-4">
                 <CCardBody className="cardbodypadding">
                   <CForm>

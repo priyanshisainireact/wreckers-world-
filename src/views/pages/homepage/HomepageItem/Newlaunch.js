@@ -53,13 +53,25 @@ class NewLaunch extends Component {
     }
   
     render() {
-      return (
-        <div>
-         
-            <a target="_blank" href={this.state.recentBlogPost.url}>{this.state.recentBlogPost.name}</a>
-            <img src={this.state.recentBlogPost.thumbnail || this.state.recentBlogPost.enclosure}/>
-        </div>
-      );
+      if(this.props.imageHeight === '300px'){
+        return (
+          <div>
+           
+              <a target="_blank" href={this.state.recentBlogPost.url} >{this.state.recentBlogPost.name} </a>
+              <img src={this.state.recentBlogPost.thumbnail || this.state.recentBlogPost.enclosure} style={{height:this.props.imageHeight,marginTop:'10px'}}/>
+          </div>
+        );
+      }
+      else{
+        return (
+          <div>
+           
+              <a target="_blank" href={this.state.recentBlogPost.url}>{this.state.recentBlogPost.name}</a>
+              <img src={this.state.recentBlogPost.thumbnail || this.state.recentBlogPost.enclosure} style={{height:'150px',marginTop:'10px'}}/>
+          </div>
+        );
+      }
+     
     }
   }
 

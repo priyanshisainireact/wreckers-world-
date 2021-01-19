@@ -1,36 +1,50 @@
 section#footer {
-    background-color: #000;
-    color: #fff;
-    padding: 18px 0px 18px 0px;
+  background-color: #000;
+  color: #fff;
+  padding: 18px 0px 18px 0px;
 }
 .footerli {
-    color: #fff;
-    list-style: none;
-    line-height: 30px;
-    font-size: 13px;
-    text-decoration: underline;
+  color: #fff;
+  list-style: none;
+  line-height: 30px;
+  font-size: 13px;
+  text-decoration: underline;
 }
 section#footerbottom {
-    background: #000000eb !important;
+  background: #000000eb !important;
 }
 .footer-li {
-    display: inline;
-    padding: 7px;
-    color: #4dbc15;
-    font-size: 13px;
+  display: inline;
+  padding: 7px;
+  color: #4dbc15;
+  font-size: 13px;
 }
 .footer-heading {
-    font-weight: 100;
-    color: #fff;
-    margin-top: 10px;
-    padding-left: 1%;
+  font-weight: 100;
+  color: #fff;
+  margin-top: 10px;
+  padding-left: 1%;
 }
 .footer-heading:after {
-    width: 38px;
-    height: 2px;
-    background-color: #4dbc15;
-    left: 28px;
-    top: 30px;
-    position: absolute;
-    content: "";
+  width: 38px;
+  height: 2px;
+  background-color: #4dbc15;
+  left: 28px;
+  top: 30px;
+  position: absolute;
+  content: "";
+}
+.footerrow {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.footercol {
+  width: 50%;
+}
+.card-group.footersubcard {
+  margin: 0px;
+}
+h5.footerheading {
+  font-size: 17px;
 }
