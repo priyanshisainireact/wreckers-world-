@@ -739,6 +739,7 @@ const BasicForms = () => {
             </CCardHeader>
             <CCardBody>
               <CForm action="" method="post" className="form-horizontal">
+           
                 <CFormGroup row>
                   <CCol xs="4">
                     <CInput placeholder=".col-4" />

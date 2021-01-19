@@ -1,72 +1,76 @@
 .listing {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    border: 1px solid #e6e6e6;
-    margin-top: 20px;
-  }
-  p {
-    line-height: 2;
-    font-size: 13px;
-    margin: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  border: 1px solid #e6e6e6;
+  margin-top: 20px;
+  background: #e6e6e67d;
 }
-  .yardlogo {
-    padding: 10px;
-    width: 25%;
+p {
+  line-height: 2;
+  font-size: 13px;
+  margin: 0px;
 }
-  
-  .yarddetail {
-    width: 75%;
-    padding: 10px;
-    color: #505050;
-  }
-  img {
-    width: 100%;
-    /* border-right: 1px solid #e6e6e6; */
-    padding-right: 20px;
+.yardlogo {
+  padding: 10px;
+  width: 25%;
+  border-right: 1px solid #e6e6e6;
+}
+
+.yarddetail {
+  width: 75%;
+  padding: 10px;
+  color: #505050;
+}
+img {
+  width: 100%;
+  /* border-right: 1px solid #e6e6e6; */
+  padding-right: 20px;
 }
 h2.yardname {
-    font-size: 16px;
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 20px;
 }
 input[type="text"] {
-    width: 100%;
-    border: 1px solid #e6e6e6;
-    /* margin-top: 20px; */
-    height: 40px;
-    /* font-size: 13px; */
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  /* margin-top: 20px; */
+  height: 40px;
+  /* font-size: 13px; */
 }
 .fa-facebook {
-  background: #3B5998;
+  background: #3b5998;
   color: white;
   padding: 10px;
   margin: 2px;
 }
-.fa-twitter{
-  background: #55ACEE;
+.fa-twitter {
+  background: #55acee;
   color: white;
   padding: 10px;
   margin: 2px;
 }
-.fa-pinterest{
+.fa-pinterest {
   background: #cb2027;
   color: white;
   padding: 10px;
   margin: 2px;
 }
-.fa-linkedin{
+.fa-linkedin {
   background: #007bb5;
   color: white;
   padding: 10px;
   margin: 2px;
 }
-.detailpictures{
+.detailpictures {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  
+
   margin-top: 15px;
 }
-.pictureone{
+.pictureone {
   padding: 10px;
   width: 25%;
 }
@@ -85,7 +89,7 @@ h2.Detail-heading {
 ul.formlist {
   line-height: 2;
   color: #636161;
-  font-size: 15px;
+  font-size: 18px;
   border-bottom: 1px solid #e6e6e6;
   padding-bottom: 20px;
 }
@@ -104,12 +108,13 @@ h3.relateditemheading {
   font-size: 22px;
 }
 .card {
+  zoom: 80%;
   margin: 30px 0px 30px 0px;
 }
 .form-news-heading {
   padding: 7px 14px 0px 0;
   font-size: 28px;
-  font-family: "Times New Roman",Times,serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: 900;
   margin: 0 0 0px;
   margin-left: 30px;
@@ -124,6 +129,11 @@ h3.relateditemheading {
   content: "";
 }
 .btn-primary {
+  color: #fff;
+  background-color: #4dbc15;
+  border-color: #4dbc15;
+}
+.btn-primary:hover {
   color: #fff;
   background-color: #4dbc15;
   border-color: #4dbc15;

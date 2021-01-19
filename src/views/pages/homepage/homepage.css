@@ -1,36 +1,35 @@
-
 h2.news-heading {
-    padding: 7px 14px 0px 0;
-    font-size: 28px;
-    font-family: "Times New Roman",Times,serif;
-    font-weight: 900;
-    margin: 0 0 0px;
-    margin-left: 48px;
+  padding: 7px 14px 0px 0;
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+  margin: 0 0 0px;
+  margin-left: 48px;
 }
 h2.news-heading:after {
-    width: 45px;
-    height: 13px;
-    background-color: #4dbc15;
-    left: 0px;
-    top: 18px;
-    position: absolute;
-    content: "";
+  width: 45px;
+  height: 13px;
+  background-color: #4dbc15;
+  left: 0px;
+  top: 18px;
+  position: absolute;
+  content: "";
 }
 h2.bidtitle {
-    text-align: center;
-    font-size: 14px;
-    padding-top: 3%;
-    font-weight: 700;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 3%;
+  font-weight: 700;
 }
 p {
-    font-size: 13px;
-    margin: 0px;
+  font-size: 18px !important;
+  margin: 0px;
 }
 .biddetails {
-    text-align: center;
+  text-align: center;
 }
 span {
-    font-weight: 600;
+  font-weight: 600;
 }
 /* .bid-card {
     border: 1px solid #e1e1e1;
@@ -38,139 +37,153 @@ span {
     margin-top: 8px;
 } */
 h2.newlaunchtitle {
-    font-size: 12px;
-    font-weight: 600;
-    margin-top: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
 }
 .col-lg-3.cities-card {
-    border: 1px solid #dee2e6;
-    padding: 12px;
+  border: 1px solid #dee2e6;
+  padding: 12px;
 }
 h4.city-name {
-    font-size: 14px;
-
+  font-size: 16px;
+  font-weight: 600;
 }
 p.yardcount {
-    color: #4dbc15;
+  color: #4dbc15;
 }
 img {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
-.bidrow{
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    /* border: 1px solid #e6e6e6; */
- 
+.bidrow {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  /* border: 1px solid #e6e6e6; */
 }
 .bidcol-1 {
-    padding: 0px 0px 8px 0px;
-    width: 50%;
+  padding: 0px 0px 8px 0px;
+  width: 50%;
 }
 .bidnow {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 .bid-card {
-    border-right: 1px solid #dee2e6;
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  margin-top: 15px;
 }
 h2.bidtitlecol {
-    font-size: 14px;
-    font-weight: 700;
+  font-size: 14px;
+  font-weight: 700;
 }
 a {
-    font-size: 13px;
-    color: #000000;
-    text-decoration: none;
-    background-color: transparent;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: 600;
 }
 
 .newlaunch {
-    border-right: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
 }
 .newlaunchsection {
-    border-bottom: 1px solid #dee2e6;
-    padding-bottom: 20px;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 20px;
 }
 .eventsection {
-    border-bottom: 1px solid #dee2e6;
-    padding-bottom: 18px;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 18px;
 }
 .newssection {
-    padding: 10px 0px 10px 0px;
-    border-bottom: 1px solid #dee2e6;
+  padding: 10px 0px 10px 0px;
+  border-bottom: 1px solid #dee2e6;
 }
 .learnmore {
-    background: #4dbc15;
-    border: none;
-    font-size: 13px;
-    color: #fff;
-    height: 30px;
-    margin-top: 10px;
-    width: 120px;
+  background: #4dbc15;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  height: 40px;
+  margin-top: 10px;
+  width: 140px;
 }
 .Contact {
-    background: #4dbc15;
-    color: #fff;
-    text-align: center;
-    padding: 4%;
-    border-radius: 18px;
-    margin-top: -20px;
+  background: #4dbc15;
+  color: #fff;
+  text-align: center;
+  padding: 4%;
+  border-radius: 18px;
+  margin-top: -20px;
 }
 .boldspan {
-    font-size: 30px;
+  font-size: 30px;
 }
 .contactbtn {
-    background: #fff;
-    border: none;
-    width: 120px;
-    font-size: 14px;
-    height: 30px;
-    margin-top: 10px;
+  background: #fff;
+  border: none;
+  width: 140px;
+  font-size: 17px;
+  height: 40px;
+  margin-top: 10px;
 }
 .processbg {
-    background: #dee2e652;
-    margin-top: 20px;
-    padding-top: 20px;
+  background: #dee2e652;
+
+  padding-top: 20px;
 }
 .row {
-    position: relative;
+  position: relative;
 }
 .searchsubmit {
-    position: absolute;
-    padding: 8px;
-    border: none;
-    right: 0%;
-    width: 50px;
+  position: absolute;
+  padding: 8px;
+  border: none;
+  right: 0%;
+  width: 50px;
 }
 .searchbycity {
-    margin-top: 20px;
-    padding: 20px 0px 20px 0px;
-    background: #f4f6f7;
+  margin-top: 20px;
+  padding: 20px 0px 20px 0px;
+  background: #f4f6f7;
 }
 .citywrecker {
-    
-    padding: 0px 0px 20px 0px;
-    border-bottom: 1px solid #dee2e6;
+  padding: 0px 0px 20px 0px;
+  border-bottom: 1px solid #dee2e6;
 }
 .view {
-    color: #4dbc15;
+  color: #4dbc15;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.homebidimage {
+  padding: 0px;
+}
+.col-lg-8.width-md {
+  zoom: 67%;
+}
+.insidewrecker {
+  margin-top: 18%;
+}
+.sidebanner {
+  padding: 10%;
+}
+p.footer-pera {
+  font-size: 13px !important;
+}
+.cities-card:hover {
+  border-top: 3px solid #4dbc15;
+}
+.col-lg-3.cities-card:nth-child(1) {
+  border-top: 3px solid #4dbc15;
+}
+button.homebidbtn {
+  background: #4dbc15;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  height: 40px;
+  margin-top: 10px;
+  width: 140px;
+  float: right;
+}

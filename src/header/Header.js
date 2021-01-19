@@ -21,6 +21,7 @@ class Header extends Component{
                 <div className="row">
                 <div className="logo">
 <img src={'./avatars/WreckersLogo.png'} style={{height:'auto',width:'50%'}} />
+<p className="tagline">Sustainability - Comes First</p>
 </div>
                 </div>
             </div>

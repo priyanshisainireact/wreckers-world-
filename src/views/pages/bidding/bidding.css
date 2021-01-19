@@ -1,53 +1,149 @@
 .carimagelist {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
 }
 .imageone {
-    padding: 8px 0px 8px 0px;
-    width: 25%;
+  padding: 8px 0px 8px 0px;
+  width: 25%;
 }
 .row.cardetailcard {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 button.bidplace {
-    background: #4dbc15;
-    border: none;
-    font-size: 13px;
-    color: #fff;
-    height: 30px;
-    margin-top: 10px;
-    width: 120px;
+  background: #4dbc15;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  height: 40px;
+  margin-top: 10px;
+  width: 150px;
 }
 .detailcarname {
-    font-size: 23px;
-    font-weight: 600;
-    margin-top: 15px;
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 15px;
 }
 .bidmessage {
-    color: red;
-    font-size: 13px;
-    font-style: italic;
-    margin-bottom: 10px;
+  color: red;
+  font-size: 18px;
+  font-style: italic;
+  margin: 20px 0px 20px 0px;
 }
 p.endingin {
-    color: #4dbc15;
-    font-size: 13px;
+  color: #4dbc15;
+  font-size: 13px;
+  margin: 20px 0px 20px 0px;
 }
 .bidcount {
-    font-weight: 600;
+  margin: 20px 0px 20px 0px;
+  font-weight: 600;
 }
 .card-header {
-    padding: .75rem 1.25rem;
-    margin-bottom: 0;
-    background-color: rgb(77 188 21 / 10%);
-    border-bottom: 1px solid rgb(77 188 21);
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgb(216 216 216 / 37%);
+  border-bottom: 1px solid rgb(223 223 223);
 }
 textarea.form-control {
-    height: 120px !important;
+  height: 120px !important;
 }
 .card-footer {
-    padding: .75rem 1.25rem;
-    background-color: rgb(237 248 231);
-    border-top: 1px solid rgb(77 188 21);
+  padding: 0.75rem 1.25rem;
+  background-color: rgb(216 216 216 / 37%);
+  border-top: 1px solid rgb(223 223 223);
+}
+.btn-primary {
+  margin: 1%;
+  color: #fff;
+  background-color: #4dbc15;
+  border-color: #4dbc15;
+}
+
+h3.brndsidebar.title {
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 14px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 7px 14px;
+}
+.carlistsidebar {
+  zoom: 67%;
+}
+.bybrand {
+  margin-top: 30px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 35px;
+}
+/* h3.brndsidebar.title:after {
+  content: " ";
+  width: 75px;
+  border-bottom: 8px solid #4dbc15;
+  display: block;
+  position: absolute;
+  top: 70px;
+} */
+.check {
+  margin: 10px 0px;
+  font-size: 18px;
+}
+.check {
+  margin: 20px 0px;
+  font-size: 18px;
+}
+.brandscroll {
+  overflow-y: scroll;
+  height: 400px;
+}
+label {
+  display: inline;
+  margin-bottom: 0.5rem;
+}
+.col-lg-8.zoom {
+  zoom: 67%;
+}
+.bodytype {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding-bottom: 20px;
+  margin-bottom: 5px;
+}
+.bodytypecol {
+  width: 50%;
+}
+button.bodytype {
+  width: 86%;
+  text-align: center;
+  border: 1px solid #4dbc15;
+  font-size: 17px;
+  background: #4dbc1538;
+}
+h4.panel-title {
+  background: #e6e6e6;
+  margin-top: 8%;
+}
+img.pricebidimage {
+  height: 53%;
+  position: absolute;
+  width: 30%;
+  right: 5px;
+  bottom: 54px;
+}
+p.greatdeal {
+  background: #4dbc15;
+  width: 48%;
+  position: absolute;
+  top: 26px;
+  text-align: center;
+  color: #fff;
+}
+button.managebtn {
+  background: #4dbc15;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  height: 30px;
+  margin-top: 4px;
+  width: 120px;
 }

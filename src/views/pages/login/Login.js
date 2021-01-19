@@ -84,14 +84,6 @@ const Login = () => {
                         >
                           Login
                         </CButton>
-                        <CButton
-                          color="success"
-                          className="px-4"
-                          onClick={signInWithGoogle}
-                          isGoogleSignIn
-                        >
-                          Sign In With Google
-                        </CButton>
                       </CCol>
                       <CCol xs="6" className="text-right">
                         <Link to="/forgotpassword">
@@ -100,6 +92,17 @@ const Login = () => {
                           </CButton>
                         </Link>
                       </CCol>
+                    </CRow>
+                    <CRow>
+                      <CButton
+                        color="success"
+                        style={{ border: "none", marginTop: "20px" }}
+                        className="px-4 btn-twitter mb-1 btn btn-block"
+                        onClick={signInWithGoogle}
+                        isGoogleSignIn
+                      >
+                        Sign In With Google
+                      </CButton>
                     </CRow>
                   </CForm>
                 </CCardBody>

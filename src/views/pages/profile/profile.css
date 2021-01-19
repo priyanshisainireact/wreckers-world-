@@ -1,66 +1,90 @@
 .usercarlist {
-    box-shadow: 2px 1px 9px 2px #f1f1f1;
-    margin: 20px 0px 20px 0px;
-    padding: 20px;
-}   
+  margin: 20px 0px 20px 0px;
+  padding: 20px;
+
+  box-shadow: 2px 2px 2px 2px #4a4a4a1a;
+}
 .caruserbidcol-1 {
-    width: 30%;
+  width: 50%;
 }
 .caruserbidcol-2 {
-    width: 60%;
-}   
+  width: 50%;
+}
 .caruserbidrow {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #e2e2e2;
-}   
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  background: #c1c7d033;
+  box-shadow: 2px 2px 2px 2px #4a4a4a1a;
+  padding-top: 2%;
+}
 button.managebtn {
-    background: #4dbc15;
-    border: none;
-    font-size: 13px;
-    color: #fff;
-    height: 30px;
-    margin-top: 4px;
-    width: 120px;
-} 
+  background: #4dbc15;
+  border: none;
+  font-size: 13px;
+  color: #fff;
+  height: 30px;
+  margin-top: 4px;
+  width: 120px;
+}
 .caruserbidrow:nth-child(3) {
-    filter: grayscale(100%);
-}  
+  filter: grayscale(100%);
+}
 .circleimg {
-    height: 150px;
-    width: 150px;
+  height: 150px;
+  width: 150px;
 }
 .profilename {
-    text-align: center;
-    border-bottom: 1px solid #e2e2e2;
-}  
-h2.username {
-    font-size: 28px;
-    padding-top: 20px;
-    font-weight: 700;
-}  
-.Personaldetails {
-    padding: 10px 0px 10px 0px;
-    border-bottom: 1px solid #e2e2e2;
-}   
-p.edit {
-    font-size: 18px;
-}    
-i.fa.fa-pencil-square-o {
-    color: #4dbc15;
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
 }
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #4dbc15;
-    margin: 0px 0px 20px 0px;
+h2.username {
+  font-size: 28px;
+  padding-top: 20px;
+  font-weight: 700;
+}
+.Personaldetails {
+  padding: 10px 0px 10px 0px;
+  border-bottom: 1px solid #e2e2e2;
+}
+p.edit {
+  font-size: 18px;
+}
+i.fa.fa-pencil-square-o {
+  color: #4dbc15;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #4dbc15;
+  margin: 0px 0px 20px 0px;
 }
 a:hover {
-    color: #4dbc15;
+  color: #4dbc15;
 }
 ul.nav.nav-pills {
-    border-bottom: 1px solid #e2e2e2;
-    margin-bottom: 25px;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 25px;
+}
+.zoom {
+  zoom: 67%;
+}
+img.pricetag {
+  width: 20%;
+  right: 0px;
+}
+h2.bidtitlecol {
+  font-size: 22px;
+  font-weight: 700;
+}
+h4.profhead {
+  font-weight: 600;
+}
+.usercarlistsidebar {
+  margin: 0px 0px 20px 0px;
+  padding: 20px;
+  background: #f3f4f6;
+  box-shadow: 2px 2px 2px 2px #4a4a4a1a;
 }
