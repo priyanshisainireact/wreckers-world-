@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CityWreckers from "../../views/pages/homepage/HomepageItem/Citywreckers";
 const Search = () => {
   const [searchField, setSearchField] = useState("");
-  const [value, setValue] = useState("Auckland");
+  const [value, setValue] = useState("");
   const handleChange = (e) => {
     setSearchField(e.target.value);
   };
@@ -35,7 +35,7 @@ const Search = () => {
         </div>
       </div>
       <div class="row citywrecker">
-        <CityWreckers cityList={value} />
+        <CityWreckers cityValue={value} />
       </div>
     </>
   );

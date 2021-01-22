@@ -35,6 +35,7 @@ import {
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 import { DocsLink } from "src/reusable";
+import { dataCountries, dataStates, dataCities } from "./data.js";
 
 const BidForm = () => {
   const [collapsed, setCollapsed] = React.useState(true);
@@ -42,6 +43,7 @@ const BidForm = () => {
   const [countryState, setCountryState] = React.useState([]);
   const [uploadImage, setUploadImage] = React.useState([]);
   const [person, setPerson] = React.useState([]);
+
   const [updatecheckbox, setUpdateCheckbox] = React.useState({
     paymentMethodCheck: false,
     paymentMethodCash: false,
@@ -61,9 +63,11 @@ const BidForm = () => {
     incrementalvalue: "",
     endingDate: "",
     service: "",
-
     additionalInformation: "",
   });
+  const defaultItemCategory = { categoryName: "Select Category ..." };
+  const defaultItemProduct = { productName: "Select Product ..." };
+  const defaultItemOrder = { orderName: "Select Order ..." };
 
   const handleSubmit = (e) => {
     e.preventDefault();
