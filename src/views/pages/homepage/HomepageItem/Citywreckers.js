@@ -1,11 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { yardList } from "./yardList";
 
-const CityWreckers = ({ cityList }) => {
-  const [yardCity, setYardCity] = useState(yardList);
+const CityWreckers = ({ cityValue }) => {
+  const [yardCity, setYardCity] = useState([]);
   const [term, setTerm] = useState("");
 
-  console.log(yardCity);
+  useEffect(() => {
+    if (cityValue) {
+      const yardCity = yardList;
+      const cityName = cityValue.toLowerCase();
+      const list = yardCity.filter((yard) => {
+        return yard.cityName === cityName;
+      });
+      setYardCity(list);
+      console.log(cityName);
+    } else {
+      setYardCity(yardList);
+      console.log("not found");
+    }
+  }, [cityValue]);
+
   return (
     <>
       {yardCity.map((city) => {

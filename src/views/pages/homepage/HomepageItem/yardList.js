@@ -1,52 +1,52 @@
 export const yardList = [
   {
     id: 1,
-    cityName: "Auckland",
+    cityName: "auckland",
     noOfYards: 2,
   },
   {
     id: 2,
-    cityName: "Melbourne",
+    cityName: "melbourne",
     noOfYards: 2,
   },
   {
     id: 3,
-    cityName: "Sydney",
+    cityName: "sydney",
     noOfYards: 2,
   },
   {
     id: 4,
-    cityName: "QueensLand",
+    cityName: "queensLand",
     noOfYards: 2,
   },
   {
     id: 5,
-    cityName: "Wellington",
+    cityName: "wellington",
     noOfYards: 2,
   },
   {
     id: 6,
-    cityName: "Christchruch",
+    cityName: "christchruch",
     noOfYards: 2,
   },
   {
     id: 7,
-    cityName: "Newcastle",
+    cityName: "newcastle",
     noOfYards: 2,
   },
   {
     id: 8,
-    cityName: "Frankton",
+    cityName: "frankton",
     noOfYards: 2,
   },
   {
     id: 9,
-    cityName: "Springton",
+    cityName: "springton",
     noOfYards: 2,
   },
   {
     id: 10,
-    cityName: "Surrey",
+    cityName: "surrey",
     noOfYards: 2,
   },
 ];
