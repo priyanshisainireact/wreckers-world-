@@ -187,3 +187,34 @@ button.homebidbtn {
   width: 140px;
   float: right;
 }
+.TwitterColOne {
+  width: 20%;
+}
+.TwitterColSecond {
+  width: 60%;
+}
+
+.TwitterRow {
+  display: flex;
+}
+a.fa.fa-twitter.tweet {
+  font-size: 30px;
+  color: #55acee;
+  background: none;
+}
+h2.tweettitle {
+  font-size: 21px;
+  padding-top: 4px;
+  font-weight: 600;
+}
+.twitterCard {
+  box-shadow: 4px 5px 8px 4px #f4f6f7;
+  margin: 25px 0px 25px 0px;
+  padding: 20px;
+}
+.twitterSection {
+  margin-top: 2%;
+}
+p.TweetTime {
+  margin-top: 35px;
+}

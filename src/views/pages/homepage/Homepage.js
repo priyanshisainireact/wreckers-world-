@@ -10,7 +10,8 @@ import Video from "./HomepageItem/video/Video";
 import EventCalendar from "./HomepageItem/EventCalendar/EventCalendar";
 import { Link } from "react-router-dom";
 import Search from "../../../utilities/search/Search";
-
+import SellCar from "./HomepageItem/SellCar";
+import Twitter from "./HomepageItem/Twitter";
 const Homepage = () => {
   return (
     <div class="container-fluid">
@@ -357,6 +358,34 @@ const Homepage = () => {
 
       {/* End of Video section */}
 
+      {/* sell your car in 60 min section */}
+
+      <div class="row">
+        <div className="col-lg-2">
+          <div className="sidebanner">
+            <img
+              src={"./avatars/WindyWreckersSet2.png"}
+              style={{ height: "auto", width: "100%", padding: "0px" }}
+            />
+          </div>
+        </div>
+        <div className="col-lg-8 width-md">
+          <div className="row">
+            <h2 class="news-heading">Gone in 60 Min </h2>
+          </div>
+          <SellCar />
+        </div>
+        <div className="col-lg-2">
+          <div className="sidebanner">
+            <img
+              src={"./avatars/WindyWreckersSet2.png"}
+              style={{ height: "auto", width: "100%", padding: "0px" }}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* end of sell your car in 60 min section */}
       {/* Inside Wreckers section */}
       <div className="row processbg">
         <div className="col-lg-2"></div>
@@ -379,11 +408,31 @@ const Homepage = () => {
       {/* End of Inside wreckers section */}
       {/* contact section */}
       <div class="row">
-        <div className="col-lg-2"></div>
+        <div className="col-lg-2">
+          <div className="sidebanner">
+            <img
+              src={"./avatars/samirBannerAd1.png"}
+              style={{ height: "auto", width: "100%", padding: "0px" }}
+            />
+          </div>
+        </div>
         <div className="col-lg-8 width-md">
           <Contact />
+          <div className="twitterSection">
+            <div className="row">
+              <h2 class="news-heading">Our Family on Twitter </h2>
+            </div>
+            <Twitter />
+          </div>
         </div>
-        <div className="col-lg-2"></div>
+        <div className="col-lg-2">
+          <div className="sidebanner">
+            <img
+              src={"./avatars/Banner1-2.png"}
+              style={{ height: "auto", width: "100%", padding: "0px" }}
+            />
+          </div>
+        </div>
       </div>
 
       {/* End of contact section */}
