@@ -48,6 +48,7 @@ h2.newlaunchtitle {
 h4.city-name {
   font-size: 16px;
   font-weight: 600;
+  text-transform: capitalize;
 }
 p.yardcount {
   color: #4dbc15;
