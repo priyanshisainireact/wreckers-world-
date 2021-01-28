@@ -40,7 +40,9 @@ import { dataCountries, dataStates, dataCities } from "./data.js";
 const BidForm = () => {
   const [collapsed, setCollapsed] = React.useState(true);
   const [showElements, setShowElements] = React.useState(true);
-  const [countryState, setCountryState] = React.useState([]);
+  const [countryName, setCountryName] = React.useState(dataCountries);
+  const [stateName, setStateName] = React.useState(null);
+  const [cityName, setCityName] = React.useState(null);
   const [uploadImage, setUploadImage] = React.useState([]);
   const [person, setPerson] = React.useState([]);
 
@@ -65,9 +67,6 @@ const BidForm = () => {
     service: "",
     additionalInformation: "",
   });
-  const defaultItemCategory = { categoryName: "Select Category ..." };
-  const defaultItemProduct = { productName: "Select Product ..." };
-  const defaultItemOrder = { orderName: "Select Order ..." };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -110,6 +109,10 @@ const BidForm = () => {
     const value = e.target.value;
     setUserDetail({ ...userDetail, [name]: value });
   };
+
+  const hasState = stateName;
+  const hasCity = cityName;
+
   return (
     <div className="container">
       {console.log({ uploadImage })}
@@ -207,18 +210,36 @@ const BidForm = () => {
                           custom
                           name="country"
                           id="country"
-                          onChange={handleChange}
+                          // onChange={handleChangeCountry}
                           value={userDetail.country}
                         >
-                          <option value="0">Please select your country</option>
+                          {countryName.map((country) => {
+                            return (
+                              <option
+                                key={country.countryId}
+                                value={country.countryName}
+                              >
+                                {country.countryName}
+                              </option>
+                            );
+                          })}
+                          {/* <option value="0">Please select your country</option>
                           <option value="Australia">Australia</option>
                           <option value="Canada">Canada</option>
                           <option value="New Zealand">New Zealand</option>
-                          <option value="U.S.A.">U.S.A.</option>
+                          <option value="U.S.A.">U.S.A.</option> */}
                         </CSelect>
                       </CCol>
+
                       <CCol xs="12" md="9" lg="6">
-                        <CSelect custom name="select" id="select">
+                        <CSelect
+                          custom
+                          name="state"
+                          id="state"
+                          disabled={!hasState}
+                          // onChange={handleChangeState}
+                          value={userDetail.state}
+                        >
                           <option value="0">Please select your state</option>
                           <option value="1">Option #1</option>
                           <option value="2">Option #2</option>
@@ -237,7 +258,14 @@ const BidForm = () => {
                     <CLabel htmlFor="select">Select City *</CLabel>
                   </CCol> */}
                       <CCol xs="12" md="9" lg="6">
-                        <CSelect custom name="select" id="select">
+                        <CSelect
+                          custom
+                          name="city"
+                          id="city"
+                          disabled={!hasCity}
+                          // onChange={handleChangeCity}
+                          value={userDetail.city}
+                        >
                           <option value="0">Please select your city</option>
                           <option value="1">Option #1</option>
                           <option value="2">Option #2</option>
