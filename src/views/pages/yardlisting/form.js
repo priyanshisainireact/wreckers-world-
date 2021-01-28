@@ -39,7 +39,36 @@ import { DocsLink } from "src/reusable";
 const BasicForms = () => {
   const [collapsed, setCollapsed] = React.useState(true);
   const [showElements, setShowElements] = React.useState(true);
-
+  const [logoUpload, setLogoUpload] = React.useState([]);
+  const [yardImage, setYardImage] = React.useState([]);
+  const [yardformsubmit, setYardFormSubmit] = React.useState([]);
+  const [yardDetail, setYardDetail] = React.useState({
+    yardName: "",
+    phoneNumber: "",
+    email: "",
+    websiteUrl: "",
+    service: "",
+    additionalInfo: "",
+  });
+  const inputChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setYardDetail({ ...yardDetail, [name]: value });
+  };
+  const handleLogoChange = (e) => {
+    setLogoUpload({ ...logoUpload, ...e.target.files });
+  };
+  const UploadYardImage = (e) => {
+    setYardImage({ ...yardImage, ...e.target.files });
+  };
+  const yardSubmit = (e) => {
+    e.preventDefault();
+    setYardFormSubmit({
+      ...yardDetail,
+      image: { ...yardImage },
+      logoImage: { ...logoUpload },
+    });
+  };
   return (
     <div className="container">
       <div className="row">
@@ -52,8 +81,7 @@ const BasicForms = () => {
                 </CCardHeader>
                 <CCardBody>
                   <CForm
-                    action=""
-                    method="post"
+                    onSubmit={yardSubmit}
                     encType="multipart/form-data"
                     className="form-horizontal"
                   >
@@ -63,16 +91,20 @@ const BasicForms = () => {
                   </CCol> */}
                       <CCol xs="12" md="9" lg="6">
                         <CInput
-                          id="text-input"
-                          name="text-input"
-                          placeholder="Enter Name Of Yard"
+                          id="yardName"
+                          name="yardName"
+                          placeholder="Enter Name of Yard"
+                          value={yardDetail.yardName}
+                          onChange={inputChange}
                         />
                       </CCol>
                       <CCol xs="12" md="9" lg="6">
                         <CInput
-                          id="text-input"
-                          name="text-input"
+                          id="phoneNumber"
+                          name="phoneNumber"
                           placeholder="Enter Phone Number"
+                          value={yardDetail.phoneNumber}
+                          onChange={inputChange}
                         />
                       </CCol>
                     </CFormGroup>
@@ -89,10 +121,12 @@ const BasicForms = () => {
                       <CCol xs="12" md="9" lg="6">
                         <CInput
                           type="email"
-                          id="email-input"
-                          name="email-input"
+                          id="email"
+                          name="email"
                           placeholder="Enter Email"
                           autoComplete="email"
+                          value={yardDetail.email}
+                          onChange={inputChange}
                         />
                       </CCol>
                       <CCol xs="12" md="9" lg="6">
@@ -152,7 +186,13 @@ const BasicForms = () => {
                     <CLabel htmlFor="textarea-input">Additional Information</CLabel>
                   </CCol> */}
                       <CCol xs="12" md="9" lg="6">
-                        <CInputFile custom id="custom-file-input" />
+                        <CInputFile
+                          custom
+                          id="logo"
+                          type="file"
+                          name="logo"
+                          onChange={handleLogoChange}
+                        />
                         <CLabel
                           htmlFor="custom-file-input"
                           variant="custom-file"
@@ -163,9 +203,11 @@ const BasicForms = () => {
 
                       <CCol xs="12" md="9" lg="6">
                         <CInput
-                          id="text-input"
-                          name="text-input"
+                          id="websiteUrl"
+                          name="websiteUrl"
                           placeholder="Enter Website Link "
+                          value={yardDetail.websiteUrl}
+                          onChange={inputChange}
                         />
                       </CCol>
                     </CFormGroup>
@@ -181,24 +223,28 @@ const BasicForms = () => {
                   </CCol> */}
                       <CCol xs="12" md="9" lg="6">
                         <CInput
-                          id="text-input"
-                          name="text-input"
+                          id="service"
+                          name="service"
                           placeholder="Enter Services provided by the business"
+                          value={yardDetail.service}
+                          onChange={inputChange}
                         />
                       </CCol>
 
                       <CCol xs="12" md="9" lg="6">
                         <CInputFile
-                          id="file-multiple-input"
-                          name="file-multiple-input"
+                          id="yardImage"
+                          name="yardImage"
+                          type="file"
                           multiple
                           custom
+                          onChange={UploadYardImage}
                         />
                         <CLabel
                           htmlFor="file-multiple-input"
                           variant="custom-file"
                         >
-                          Choose Pictures Of Yard
+                          Choose Pictures of Yard
                         </CLabel>
                       </CCol>
                     </CFormGroup>
@@ -213,23 +259,25 @@ const BasicForms = () => {
 
                       <CCol xs="12" md="9" lg="12">
                         <CTextarea
-                          name="textarea-input"
-                          id="textarea-input"
+                          name="additionalInfo"
+                          id="additionalInfo"
                           rows="9"
                           placeholder="Additional Information"
+                          value={yardDetail.additionalInfo}
+                          onChange={inputChange}
                         />
                       </CCol>
                     </CFormGroup>
+                    <CCardFooter>
+                      <CButton type="submit" size="sm" color="primary">
+                        <CIcon name="cil-scrubber" /> Submit
+                      </CButton>
+                      <CButton type="reset" size="sm" color="danger">
+                        <CIcon name="cil-ban" /> Reset
+                      </CButton>
+                    </CCardFooter>
                   </CForm>
                 </CCardBody>
-                <CCardFooter>
-                  <CButton type="submit" size="sm" color="primary">
-                    <CIcon name="cil-scrubber" /> Submit
-                  </CButton>
-                  <CButton type="reset" size="sm" color="danger">
-                    <CIcon name="cil-ban" /> Reset
-                  </CButton>
-                </CCardFooter>
               </CCard>
             </CCol>
           </CRow>

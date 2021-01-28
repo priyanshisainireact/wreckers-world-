@@ -400,7 +400,7 @@ const BidForm = () => {
                             onChange={handlecheckBox}
                             checked={userDetail.paymentMethodCard}
                           />
-                          <label for="vehicle3"> Cash</label>
+                          <label for="vehicle3"> Card</label>
                         </div>
                         <div className="check">
                           <input
@@ -410,7 +410,7 @@ const BidForm = () => {
                             onChange={handlecheckBox}
                             checked={userDetail.paymentMethodCash}
                           />
-                          <label for="vehicle3"> Cheque</label>
+                          <label for="vehicle3"> Cash</label>
                         </div>
                         <div className="check">
                           <input
@@ -420,7 +420,7 @@ const BidForm = () => {
                             onChange={handlecheckBox}
                             checked={userDetail.paymentMethodCheck}
                           />
-                          <label for="vehicle3"> Card</label>
+                          <label for="vehicle3"> Cheque</label>
                         </div>
                       </CCol>
                     </CFormGroup>

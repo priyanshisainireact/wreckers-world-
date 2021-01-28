@@ -4,11 +4,14 @@ section#footer {
   padding: 18px 0px 18px 0px;
 }
 .footerli {
+  display: inline;
   color: #fff;
   list-style: none;
   line-height: 30px;
   font-size: 13px;
   text-decoration: underline;
+  padding: 4px;
+  border-right: 1px solid #ffffff3b;
 }
 section#footerbottom {
   background: #000000eb !important;
@@ -47,4 +50,15 @@ section#footerbottom {
 }
 h5.footerheading {
   font-size: 17px;
+}
+section#FooterMid {
+  background: #000000d9;
+  padding: 10px;
+}
+li.FooterBrandLi {
+  color: #fff;
+  font-weight: 100;
+  list-style: none;
+  font-size: 13px;
+  line-height: 27px;
 }

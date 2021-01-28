@@ -10,66 +10,42 @@ import Video from "./HomepageItem/video/Video";
 import EventCalendar from "./HomepageItem/EventCalendar/EventCalendar";
 import { Link } from "react-router-dom";
 import Search from "../../../utilities/search/Search";
-
+import SellCar from "./HomepageItem/SellCar";
+import Twitter from "./HomepageItem/Twitter";
+import ChooseYard from "./HomepageItem/ChooseYard";
 const Homepage = () => {
   return (
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-2">
           <div className="sidebanner">
-            <img
-              src={"./avatars/Banner.png"}
-              style={{ height: "auto", width: "100%", padding: "0px" }}
-            />
-            <img
-              src={"./avatars/grandebannerAd1.png"}
-              style={{
-                height: "auto",
-                width: "100%",
-                marginTop: "20px",
-                padding: "0px",
-              }}
-            />
-            <img
-              src={"./avatars/TahaAuto1.png"}
-              style={{
-                height: "auto",
-                width: "100%",
-                marginTop: "20px",
-                padding: "0px",
-              }}
-            />
+            <img src={"./avatars/Banner.png"} className="homeBanner" />
+            <img src={"./avatars/grandebannerAd1.png"} className="homeBanner" />
+            <img src={"./avatars/TahaAuto1.png"} className="homeBanner" />
             <img
               src={"./avatars/VicCarRemovalBanner1.png"}
-              style={{
-                height: "auto",
-                width: "100%",
-                marginTop: "20px",
-                padding: "0px",
-              }}
+              className="homeBanner"
             />
             <img
               src={"./avatars/viperbannerad1-1.png"}
-              style={{
-                height: "auto",
-                width: "100%",
-                marginTop: "20px",
-                padding: "0px",
-              }}
+              className="homeBanner"
             />
             <img
               src={"./avatars/WindycityWreckersBanner1.png"}
-              style={{
-                height: "auto",
-                width: "100%",
-                marginTop: "20px",
-                padding: "0px",
-              }}
+              className="homeBanner"
             />
             {/* <img src={'./avatars/WindyWreckersSet2.png'} style={{height:'auto',width:'100%',marginTop: '20px',padding:'0px'}} /> */}
           </div>
         </div>
         <div class="col-lg-8 width-md">
+          {/* sell your car in 60 min section */}
+          <div className="homeCarSale">
+            <div className="row">
+              <h2 class="news-heading">Gone in 60 Min </h2>
+            </div>
+            <SellCar />
+          </div>
+          {/* end of sell your car in 60 min section */}
           <div class="row">
             <div className="col-lg-10">
               <h2 class="news-heading">Just Arrived For Wrecking - Bid Now</h2>
@@ -89,7 +65,12 @@ const Homepage = () => {
             <BiddingItem />
             <BiddingItem />
           </div>
-
+          <div className="homeCarSale">
+            <div className="row">
+              <h2 class="news-heading">Why Choose Us?</h2>
+            </div>
+            <ChooseYard />
+          </div>
           {/* Wreckers By City section */}
 
           <Search />
@@ -298,55 +279,18 @@ const Homepage = () => {
         </div>
         <div class="col-lg-2">
           <div className="sidebanner">
-            <img
-              src={"./avatars/samirBannerAd1.png"}
-              style={{ height: "auto", width: "100%", padding: "0px" }}
-            />
-            <img
-              src={"./avatars/Banner1-3.png"}
-              style={{
-                height: "auto",
-                width: "100%",
-                marginTop: "20px",
-                padding: "0px",
-              }}
-            />
+            <img src={"./avatars/samirBannerAd1.png"} className="homeBanner" />
+            <img src={"./avatars/Banner1-3.png"} className="homeBanner" />
             <img
               src={"./avatars/AliCarRemovalBanner1.png"}
-              style={{
-                height: "auto",
-                width: "100%",
-                marginTop: "20px",
-                padding: "0px",
-              }}
+              className="homeBanner"
             />
             <img
               src={"./avatars/kingautobannerad1.png"}
-              style={{
-                height: "auto",
-                width: "100%",
-                marginTop: "20px",
-                padding: "0px",
-              }}
+              className="homeBanner"
             />
-            <img
-              src={"./avatars/Banner1-2.png"}
-              style={{
-                height: "auto",
-                width: "100%",
-                marginTop: "20px",
-                padding: "0px",
-              }}
-            />
-            <img
-              src={"./avatars/banner11.png"}
-              style={{
-                height: "auto",
-                width: "100%",
-                marginTop: "20px",
-                padding: "0px",
-              }}
-            />
+            <img src={"./avatars/Banner1-2.png"} className="homeBanner" />
+            <img src={"./avatars/banner11.png"} className="homeBanner" />
             {/* <img src={'./avatars/TahaAutoSet2.png'} style={{height:'auto',width:'100%',marginTop: '20px',padding:'0px'}} /> */}
           </div>
         </div>
@@ -379,11 +323,31 @@ const Homepage = () => {
       {/* End of Inside wreckers section */}
       {/* contact section */}
       <div class="row">
-        <div className="col-lg-2"></div>
+        <div className="col-lg-2">
+          <div className="sidebanner">
+            <img
+              src={"./avatars/samirBannerAd1.png"}
+              style={{ height: "auto", width: "100%", padding: "0px" }}
+            />
+          </div>
+        </div>
         <div className="col-lg-8 width-md">
           <Contact />
+          <div className="twitterSection">
+            <div className="row">
+              <h2 class="news-heading">Our Family on Twitter </h2>
+            </div>
+            <Twitter />
+          </div>
         </div>
-        <div className="col-lg-2"></div>
+        <div className="col-lg-2">
+          <div className="sidebanner">
+            <img
+              src={"./avatars/Banner1-2.png"}
+              style={{ height: "auto", width: "100%", padding: "0px" }}
+            />
+          </div>
+        </div>
       </div>
 
       {/* End of contact section */}
