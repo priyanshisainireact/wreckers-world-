@@ -18,14 +18,7 @@ import BidForm from "./views/pages/bidding/BidForm";
 import CarListing from "./views/pages/bidding/CarListing";
 import CarDetail from "./views/pages/bidding/CarDetail";
 import ResetPassword from "./views/pages/forgotpassword/ResetPassword";
-import About from "./views/pages/StaticPages/About";
-import PrivacyPolicy from "./views/pages/StaticPages/PrivacyPolicy";
-import TermsCondition from "./views/pages/StaticPages/TermsCondition";
-import SellingCar from "./views/pages/StaticPages/SellingCar";
-import TowingProcess from "./views/pages/StaticPages/TowingProcess";
-import InsideWreckers from "./views/pages/StaticPages/InsideWreckers";
-import CarSalvage from "./views/pages/StaticPages/CarSalvage";
-import Process from "./views/pages/StaticPages/Process";
+
 // const loading = (
 //   <div className="pt-3 text-center">
 //     <div className="sk-spinner sk-spinner-pulse"></div>
@@ -67,81 +60,55 @@ import Process from "./views/pages/StaticPages/Process";
 
 const App = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route exact path="/homepage">
-            <Homepage />
-          </Route>
-          <Route exact path="/listyouryard">
-            <BasicForms />
-          </Route>
-          <Route exact path="/yardlisting">
-            <YardListing />
-          </Route>
-          <Route exact path="/detailpage">
-            <DetailsPage />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          <Route exact path="/register">
-            <Register />
-          </Route>
-          <Route exact path="/subscription">
-            <Subscription />
-          </Route>
-          <Route exact path="/caruserprofile">
-            <CaruserProfile />
-          </Route>
-          <Route exact path="/yarduserprofile">
-            <YarduserProfile />
-          </Route>
-          <Route exact path="/forgotpassword">
-            <Forgot />
-          </Route>
-          <Route exact path="/resetpassword">
-            <ResetPassword />
-          </Route>
-          <Route exact path="/bidform">
-            <BidForm />
-          </Route>
-          <Route exact path="/carlisting">
-            <CarListing />
-          </Route>
-          <Route exact path="/cardetail">
-            <CarDetail />
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route exact path="/privacypolicy">
-            <PrivacyPolicy />
-          </Route>
-          <Route exact path="/terms&condition">
-            <TermsCondition />
-          </Route>
-          <Route exact path="/sellingcar">
-            <SellingCar />
-          </Route>
-          <Route exact path="/towingprocess">
-            <TowingProcess />
-          </Route>
-          <Route exact path="/inside-the-wreckers-world">
-            <InsideWreckers />
-          </Route>
-          <Route exact path="/carsalvage">
-            <CarSalvage />
-          </Route>
-          <Route exact path="/process">
-            <Process />
-          </Route>
-        </Switch>
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Homepage} />
+        <Route exact path="/homepage">
+          <Homepage />
+        </Route>
+        <Route exact path="/listyouryard">
+          <BasicForms />
+        </Route>
+        <Route exact path="/yardlisting">
+          <YardListing />
+        </Route>
+        <Route exact path="/detailpage">
+          <DetailsPage />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/register">
+          <Register />
+        </Route>
+        <Route exact path="/subscription">
+          <Subscription />
+        </Route>
+        <Route exact path="/caruserprofile">
+          <CaruserProfile />
+        </Route>
+        <Route exact path="/yarduserprofile">
+          <YarduserProfile />
+        </Route>
+        <Route exact path="/forgotpassword">
+          <Forgot />
+        </Route>
+        <Route exact path="/resetpassword">
+          <ResetPassword />
+        </Route>
+        <Route exact path="/bidform">
+          <BidForm />
+        </Route>
+        <Route exact path="/carlisting">
+          <CarListing />
+        </Route>
+        <Route exact path="/cardetail">
+          <CarDetail />
+        </Route>
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   );
 };
 
