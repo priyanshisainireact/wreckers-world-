@@ -16,7 +16,7 @@ import {
   CRow,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
-import { auth, signInWithGoogle } from "../../../firebase/firebase.utils";
+// import { auth, signInWithGoogle } from "../../../firebase/firebase.utils";
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(false);
@@ -98,8 +98,8 @@ const Login = () => {
                         color="success"
                         style={{ border: "none", marginTop: "20px" }}
                         className="px-4 btn-twitter mb-1 btn btn-block"
-                        onClick={signInWithGoogle}
-                        isGoogleSignIn
+                        // onClick={signInWithGoogle}
+                        // isGoogleSignIn
                       >
                         Sign In With Google
                       </CButton>
