@@ -31,12 +31,6 @@ const BidForm = () => {
   const [cityName, setCityName] = React.useState(null);
   const [uploadImage, setUploadImage] = React.useState([]);
   const [person, setPerson] = React.useState({});
-
-  const [updatecheckbox, setUpdateCheckbox] = React.useState({
-    paymentMethodCheck: false,
-    paymentMethodCash: false,
-    paymentMethodCard: false,
-  });
   const defaultState = {
     carDetail: "",
     name: "",
@@ -53,7 +47,14 @@ const BidForm = () => {
     service: "",
     additionalInformation: "",
   };
+
   const [userDetail, setUserDetail] = React.useState(defaultState);
+
+  const [updatecheckbox, setUpdateCheckbox] = React.useState({
+    paymentMethodCheck: false,
+    paymentMethodCash: false,
+    paymentMethodCard: false,
+  });
 
   React.useEffect(() => {
     const personNew = person;

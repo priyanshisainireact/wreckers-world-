@@ -1,5 +1,9 @@
 import React from "react";
 import "./register.css";
+import firebase, {
+  auth,
+  createUserProfileDocument,
+} from "../../../firebase/firebase.utils";
 import {
   CButton,
   CCard,
@@ -13,7 +17,6 @@ import {
   CInputGroupPrepend,
   CInputGroupText,
   CRow,
-  CSelect,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 
@@ -21,20 +24,49 @@ const Register = () => {
   const initialState = {
     firstName: "",
     lastName: "",
-    userName: "",
     email: "",
-    phone: "",
-    accountType: "",
     password: "",
     repeatPassword: "",
   };
-  const [userDeatil, setUserDetail] = React.useState([]);
+  const [userDetail, setUserDetail] = React.useState([]);
   const [user, setuser] = React.useState(initialState);
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const [isVerify, setIsVerify] = React.useState(false);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (user.password !== user.repeatPassword) {
+      alert("passwords don't match");
+      return;
+    }
+    try {
+      const { users } = await auth.createUserWithEmailAndPassword(
+        user.email,
+        user.password
+      );
+      await createUserProfileDocument(users, user.firstName);
+      setUserDetail(userDetail);
+      sendVerify();
+    } catch (error) {
+      console.error(error);
+    }
+    setIsVerify(true);
+    setTimeout(() => {
+      setIsVerify(false);
+    }, 5000);
     setUserDetail(user);
     setuser(initialState);
   };
+  const sendVerify = () => {
+    var user = firebase.auth().currentUser;
+    user
+      .sendEmailVerification()
+      .then(function () {
+        // Email sent.
+      })
+      .catch(function (error) {
+        // An error happened.
+      });
+  };
+
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -50,6 +82,7 @@ const Register = () => {
                 <CForm onSubmit={handleSubmit}>
                   <h1>Register</h1>
                   <p className="text-muted">Create your account</p>
+                  {isVerify && <p>Check Email To Verify</p>}
                   <CInputGroup className="mb-3">
                     <CInputGroupPrepend>
                       <CInputGroupText>
@@ -80,21 +113,7 @@ const Register = () => {
                       autoComplete="Last Name"
                     />
                   </CInputGroup>
-                  <CInputGroup className="mb-3">
-                    <CInputGroupPrepend>
-                      <CInputGroupText>
-                        <CIcon name="cil-user" />
-                      </CInputGroupText>
-                    </CInputGroupPrepend>
-                    <CInput
-                      type="text"
-                      name="userName"
-                      value={user.userName}
-                      onChange={handleChange}
-                      placeholder="Username"
-                      autoComplete="username"
-                    />
-                  </CInputGroup>
+
                   <CInputGroup className="mb-3">
                     <CInputGroupPrepend>
                       <CInputGroupText>@</CInputGroupText>
@@ -107,41 +126,6 @@ const Register = () => {
                       placeholder="Email"
                       autoComplete="email"
                     />
-                  </CInputGroup>
-
-                  <CInputGroup className="mb-3">
-                    <CInputGroupPrepend>
-                      <CInputGroupText>
-                        <CIcon name="cil-phone" />
-                      </CInputGroupText>
-                    </CInputGroupPrepend>
-                    <CInput
-                      type="tel"
-                      name="phone"
-                      value={user.phone}
-                      onChange={handleChange}
-                      placeholder="Phone No"
-                      autoComplete="phone"
-                    />
-                  </CInputGroup>
-
-                  <CInputGroup className="mb-3">
-                    <CInputGroupPrepend>
-                      <CInputGroupText>
-                        <CIcon name="cil-lock-locked" />
-                      </CInputGroupText>
-                    </CInputGroupPrepend>
-                    <CSelect
-                      custom
-                      name="accountType"
-                      id="accountType"
-                      value={user.accountType}
-                      onChange={handleChange}
-                    >
-                      <option value="0">Please select your account type</option>
-                      <option value="1">Car Listing</option>
-                      <option value="2">Yard Listing</option>
-                    </CSelect>
                   </CInputGroup>
 
                   <CInputGroup className="mb-3">

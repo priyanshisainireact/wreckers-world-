@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
+import { auth, signInWithGoogle } from "../../../firebase/firebase.utils";
 import {
   CButton,
   CCard,
@@ -21,14 +22,17 @@ import CIcon from "@coreui/icons-react";
 const Login = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [user, setUser] = useState([]);
-  const [email, SetEmail] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onFormSubmit = (e) => {
-    e.preventDefault();
-    setUser({ email, password });
-    if (email && password) {
-      setIsLogin(true);
+  const handelSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      setEmail("");
+      setPassword("");
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -40,7 +44,7 @@ const Login = () => {
             <CCardGroup>
               <CCard className="p-4">
                 <CCardBody>
-                  <CForm>
+                  <CForm onSubmit={handelSubmit}>
                     <h1>Login</h1>
                     {isLogin ? (
                       <p className="text-muted">User Signed In</p>
@@ -57,7 +61,7 @@ const Login = () => {
                         type="text"
                         placeholder="Email"
                         autoComplete="email"
-                        onChange={(e) => SetEmail(e.target.value)}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                     </CInputGroup>
                     <CInputGroup className="mb-4">
@@ -77,11 +81,7 @@ const Login = () => {
                     </CInputGroup>
                     <CRow>
                       <CCol xs="6">
-                        <CButton
-                          color="primary"
-                          className="px-4"
-                          onClick={onFormSubmit}
-                        >
+                        <CButton type="submit" color="primary" className="px-4">
                           Login
                         </CButton>
                       </CCol>
@@ -98,7 +98,7 @@ const Login = () => {
                         color="success"
                         style={{ border: "none", marginTop: "20px" }}
                         className="px-4 btn-twitter mb-1 btn btn-block"
-                        // onClick={signInWithGoogle}
+                        onClick={signInWithGoogle}
                         // isGoogleSignIn
                       >
                         Sign In With Google
