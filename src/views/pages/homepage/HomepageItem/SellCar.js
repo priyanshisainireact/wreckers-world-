@@ -7,7 +7,7 @@ class SellCar extends Component {
         <div className="col-lg-4">
           <img
             src={"./avatars/undraw_success_factors_fay0.png"}
-            style={{ height: "auto", width: "100%" }}
+            style={{ height: "260px", width: "100%" }}
           />
 
           <h2 className="bidtitle">Online Evaluation</h2>
@@ -16,7 +16,7 @@ class SellCar extends Component {
         <div className="col-lg-4">
           <img
             src={"./avatars/2021-01-23.png"}
-            style={{ height: "auto", width: "100%" }}
+            style={{ height: "260px", width: "100%" }}
           />
 
           <h2 className="bidtitle">Free Inspection</h2>
@@ -25,7 +25,7 @@ class SellCar extends Component {
         <div className="col-lg-4">
           <img
             src={"./avatars/undraw_towing_6yy4.png"}
-            style={{ height: "auto", width: "100%" }}
+            style={{ height: "260px", width: "100%" }}
           />
 
           <h2 className="bidtitle">Sell car in an hour</h2>

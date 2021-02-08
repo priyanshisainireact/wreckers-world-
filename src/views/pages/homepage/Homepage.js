@@ -34,7 +34,13 @@ const Homepage = () => {
               src={"./avatars/WindycityWreckersBanner1.png"}
               className="homeBanner"
             />
-            {/* <img src={'./avatars/WindyWreckersSet2.png'} style={{height:'auto',width:'100%',marginTop: '20px',padding:'0px'}} /> */}
+            <img src={"./avatars/Banner.png"} className="homeBanner" />
+            <img src={"./avatars/grandebannerAd1.png"} className="homeBanner" />
+
+            {/* <img
+              src={"./avatars/WindyWreckersSet2.png"}
+              className="homeBanner"
+            /> */}
           </div>
         </div>
         <div class="col-lg-8 width-md">
@@ -291,6 +297,9 @@ const Homepage = () => {
             />
             <img src={"./avatars/Banner1-2.png"} className="homeBanner" />
             <img src={"./avatars/banner11.png"} className="homeBanner" />
+            <img src={"./avatars/Banner.png"} className="homeBanner" />
+            <img src={"./avatars/grandebannerAd1.png"} className="homeBanner" />
+
             {/* <img src={'./avatars/TahaAutoSet2.png'} style={{height:'auto',width:'100%',marginTop: '20px',padding:'0px'}} /> */}
           </div>
         </div>
@@ -325,10 +334,7 @@ const Homepage = () => {
       <div class="row">
         <div className="col-lg-2">
           <div className="sidebanner">
-            <img
-              src={"./avatars/samirBannerAd1.png"}
-              style={{ height: "auto", width: "100%", padding: "0px" }}
-            />
+            <img src={"./avatars/samirBannerAd1.png"} className="homeBanner" />
           </div>
         </div>
         <div className="col-lg-8 width-md">
@@ -342,10 +348,7 @@ const Homepage = () => {
         </div>
         <div className="col-lg-2">
           <div className="sidebanner">
-            <img
-              src={"./avatars/Banner1-2.png"}
-              style={{ height: "auto", width: "100%", padding: "0px" }}
-            />
+            <img src={"./avatars/Banner1-2.png"} className="homeBanner" />
           </div>
         </div>
       </div>

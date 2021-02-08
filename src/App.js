@@ -18,7 +18,11 @@ import BidForm from "./views/pages/bidding/BidForm";
 import CarListing from "./views/pages/bidding/CarListing";
 import CarDetail from "./views/pages/bidding/CarDetail";
 import ResetPassword from "./views/pages/forgotpassword/ResetPassword";
-
+import Faq from "./views/pages/StaticPages/Faq";
+import Contact from "./views/pages/StaticPages/Contact";
+import CarUserForm from "./views/pages/profile/carUser";
+import BidSubscription from "./views/pages/subscription/bidSubscription";
+import AdminEventForms from "./views/pages/admin/event/eventForm";
 // const loading = (
 //   <div className="pt-3 text-center">
 //     <div className="sk-spinner sk-spinner-pulse"></div>
@@ -105,6 +109,21 @@ const App = () => {
         </Route>
         <Route exact path="/cardetail">
           <CarDetail />
+        </Route>
+        <Route exact path="/faq">
+          <Faq />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
+        </Route>
+        <Route exact path="/caruserdetail">
+          <CarUserForm />
+        </Route>
+        <Route exact path="/bidsubscription">
+          <BidSubscription />
+        </Route>
+        <Route exact path="/eventform">
+          <AdminEventForms />
         </Route>
       </Switch>
       <Footer />
