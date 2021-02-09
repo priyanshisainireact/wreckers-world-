@@ -355,36 +355,38 @@ const BidForm = () => {
                           />
                         </CCol>
                         <CCol xs="12" md="9" lg="6">
-                          <CLabel>Choose Payment Method</CLabel>
-                          <div className="check">
-                            <input
-                              type="checkbox"
-                              id="paymentMethodCard"
-                              name="paymentMethodCard"
-                              onChange={handlecheckBox}
-                              checked={userDetail.paymentMethodCard}
-                            />
-                            <label for="vehicle3"> Card</label>
-                          </div>
-                          <div className="check">
-                            <input
-                              type="checkbox"
-                              id="paymentMethodCash"
-                              name="paymentMethodCash"
-                              onChange={handlecheckBox}
-                              checked={userDetail.paymentMethodCash}
-                            />
-                            <label for="vehicle3"> Cash</label>
-                          </div>
-                          <div className="check">
-                            <input
-                              type="checkbox"
-                              id="paymentMethodCheck"
-                              name="paymentMethodCheck"
-                              onChange={handlecheckBox}
-                              checked={userDetail.paymentMethodCheck}
-                            />
-                            <label for="vehicle3"> Cheque</label>
+                          <CLabel>Payment Method</CLabel>
+                          <div class="checkflex">
+                            <div className="check">
+                              <input
+                                type="checkbox"
+                                id="paymentMethodCard"
+                                name="paymentMethodCard"
+                                onChange={handlecheckBox}
+                                checked={userDetail.paymentMethodCard}
+                              />
+                              <label for="vehicle3"> Card</label>
+                            </div>
+                            <div className="check">
+                              <input
+                                type="checkbox"
+                                id="paymentMethodCash"
+                                name="paymentMethodCash"
+                                onChange={handlecheckBox}
+                                checked={userDetail.paymentMethodCash}
+                              />
+                              <label for="vehicle3"> Cash</label>
+                            </div>
+                            <div className="check">
+                              <input
+                                type="checkbox"
+                                id="paymentMethodCheck"
+                                name="paymentMethodCheck"
+                                onChange={handlecheckBox}
+                                checked={userDetail.paymentMethodCheck}
+                              />
+                              <label for="vehicle3"> Cheque</label>
+                            </div>
                           </div>
                         </CCol>
                       </CFormGroup>
@@ -405,7 +407,12 @@ const BidForm = () => {
                       </CFormGroup>
                     </div>
 
-                    <CButton type="submit" size="sm" color="primary">
+                    <CButton
+                      type="submit"
+                      size="sm"
+                      color="primary"
+                      className="formBtn"
+                    >
                       <CIcon name="cil-scrubber" /> Submit
                     </CButton>
                   </CForm>

@@ -85,12 +85,10 @@ h3.brndsidebar.title {
 } */
 .check {
   margin: 10px 0px;
-  font-size: 18px;
+  font-size: 16px;
+  padding: 0px 10px;
 }
-.check {
-  margin: 20px 0px;
-  font-size: 18px;
-}
+
 .brandscroll {
   overflow-y: scroll;
   height: 400px;
@@ -164,4 +162,12 @@ h2.formheading:after {
   border-bottom: 3px solid #4dbc15;
   display: block;
   position: absolute;
+}
+.checkflex {
+  display: inline-flex;
+}
+button.formBtn {
+  height: 40px;
+  width: 200px;
+  margin: 20px 0px;
 }
