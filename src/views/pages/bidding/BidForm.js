@@ -8,26 +8,11 @@ import {
   CCardFooter,
   CCardHeader,
   CCol,
-  CCollapse,
-  CDropdownItem,
-  CDropdownMenu,
-  CDropdownToggle,
-  CFade,
   CForm,
   CFormGroup,
-  CFormText,
-  CValidFeedback,
-  CInvalidFeedback,
   CTextarea,
   CInput,
   CInputFile,
-  CInputCheckbox,
-  CInputRadio,
-  CInputGroup,
-  CInputGroupAppend,
-  CInputGroupPrepend,
-  CDropdown,
-  CInputGroupText,
   CLabel,
   CSelect,
   CRow,
@@ -36,6 +21,7 @@ import {
 import CIcon from "@coreui/icons-react";
 import { DocsLink } from "src/reusable";
 import { dataCountries, dataStates, dataCities } from "./data.js";
+import { firestore } from "../../../firebase/firebase.utils";
 
 const BidForm = () => {
   const [collapsed, setCollapsed] = React.useState(true);
@@ -44,14 +30,8 @@ const BidForm = () => {
   const [stateName, setStateName] = React.useState(null);
   const [cityName, setCityName] = React.useState(null);
   const [uploadImage, setUploadImage] = React.useState([]);
-  const [person, setPerson] = React.useState([]);
-
-  const [updatecheckbox, setUpdateCheckbox] = React.useState({
-    paymentMethodCheck: false,
-    paymentMethodCash: false,
-    paymentMethodCard: false,
-  });
-  const [userDetail, setUserDetail] = React.useState({
+  const [person, setPerson] = React.useState({});
+  const defaultState = {
     carDetail: "",
     name: "",
     phoneNumber: "",
@@ -66,28 +46,25 @@ const BidForm = () => {
     endingDate: "",
     service: "",
     additionalInformation: "",
+  };
+
+  const [userDetail, setUserDetail] = React.useState(defaultState);
+
+  const [updatecheckbox, setUpdateCheckbox] = React.useState({
+    paymentMethodCheck: false,
+    paymentMethodCash: false,
+    paymentMethodCard: false,
   });
 
+  React.useEffect(() => {
+    const personNew = person;
+    firestore.collection("carList").add({ personNew });
+  }, [person]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    setPerson({ ...userDetail, image: { ...uploadImage }, ...updatecheckbox });
+    setPerson({ ...userDetail });
 
-    setUserDetail({
-      carDetail: "",
-      name: "",
-      phoneNumber: "",
-      email: "",
-      country: "",
-      state: "",
-      city: "",
-      vinNumber: "",
-      openingPrice: "",
-      lowestPrice: "",
-      incrementalvalue: "",
-      endingDate: "",
-      service: "",
-      additionalInformation: "",
-    });
+    setUserDetail(defaultState);
     setUploadImage([]);
     setUpdateCheckbox({
       paymentMethodCheck: false,

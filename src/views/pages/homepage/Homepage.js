@@ -13,6 +13,7 @@ import Search from "../../../utilities/search/Search";
 import SellCar from "./HomepageItem/SellCar";
 import Twitter from "./HomepageItem/Twitter";
 import ChooseYard from "./HomepageItem/ChooseYard";
+import BlogArticle from "./HomepageItem/BlogArticle/BlogArticle";
 const Homepage = () => {
   return (
     <div class="container-fluid">
@@ -171,7 +172,6 @@ const Homepage = () => {
               <div className="row">
                 <h2 className="news-heading">Latest Events</h2>
               </div>
-
               <EventCalendar />
             </div>
           </div>
@@ -239,29 +239,8 @@ const Homepage = () => {
           {/* End of Latest News section */}
           {/* Latest Blog section */}
           <div class="row blogsection">
-            <div class="col-lg-8">
-              <div className="row">
-                <h2 class="news-heading">Latest Blog</h2>
-              </div>
-
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=https://www.autoblog.com/rss.xml"
-                }
-                imageHeight={"300px"}
-              />
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
+            <div class="col-lg-8" style={{ textAlign: "justify" }}>
+              <BlogArticle />
             </div>
             <div class="col-lg-4">
               <NewLaunch
