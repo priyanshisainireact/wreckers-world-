@@ -17,6 +17,7 @@ import {
   CRow,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
+import axios from "axios";
 // import { auth, signInWithGoogle } from "../../../firebase/firebase.utils";
 
 const Login = () => {
@@ -35,6 +36,14 @@ const Login = () => {
       console.log(error);
     }
   };
+  const getData = async () => {
+    const res = await axios.get("https://pokeapi.co/api/v2/pokemon/");
+    // const result = await res.json();
+    console.log(res);
+  };
+  React.useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <div className="c-app c-default-layout flex-row align-items-center">

@@ -18,8 +18,16 @@ import BidForm from "./views/pages/bidding/BidForm";
 import CarListing from "./views/pages/bidding/CarListing";
 import CarDetail from "./views/pages/bidding/CarDetail";
 import ResetPassword from "./views/pages/forgotpassword/ResetPassword";
-import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
-
+import Faq from "./views/pages/StaticPages/Faq";
+import Contact from "./views/pages/StaticPages/Contact";
+import CarUserForm from "./views/pages/profile/carUser";
+import BidSubscription from "./views/pages/subscription/bidSubscription";
+import AdminEventForms from "./views/pages/admin/event/eventForm";
+import {
+  auth,
+  firebase,
+  createUserProfileDocument,
+} from "./firebase/firebase.utils";
 // const loading = (
 //   <div className="pt-3 text-center">
 //     <div className="sk-spinner sk-spinner-pulse"></div>
@@ -84,24 +92,63 @@ const App = () => {
       <Header currentUser={currentUser} />
       <Switch>
         <Route exact path="/" component={Homepage} />
-        <Route exact path="/homepage" component={Homepage} />
-        <Route exact path="/listyouryard" component={BasicForms} />
-        <Route exact path="/yardlisting" component={YardListing} />
-        <Route exact path="/detailpage" component={DetailsPage} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/subscription" component={Subscription} />
-        <Route exact path="/caruserprofile" component={CaruserProfile} />
-        <Route exact path="/yarduserprofile" component={YarduserProfile} />
-        <Route exact path="/forgotpassword" component={Forgot} />
-        <Route exact path="/resetpassword" component={ResetPassword} />
-        <Route
-          exact
-          path="/bidform"
-          render={() => (isLogin ? <BidForm /> : <Redirect to="/login" />)}
-        />
-        <Route exact path="/carlisting" component={CarListing} />
-        <Route exact path="/cardetail" component={CarDetail} />
+        <Route exact path="/homepage">
+          <Homepage />
+        </Route>
+        <Route exact path="/listyouryard">
+          <BasicForms />
+        </Route>
+        <Route exact path="/yardlisting">
+          <YardListing />
+        </Route>
+        <Route exact path="/detailpage">
+          <DetailsPage />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/register">
+          <Register />
+        </Route>
+        <Route exact path="/subscription">
+          <Subscription />
+        </Route>
+        <Route exact path="/caruserprofile">
+          <CaruserProfile />
+        </Route>
+        <Route exact path="/yarduserprofile">
+          <YarduserProfile />
+        </Route>
+        <Route exact path="/forgotpassword">
+          <Forgot />
+        </Route>
+        <Route exact path="/resetpassword">
+          <ResetPassword />
+        </Route>
+        <Route exact path="/bidform">
+          <BidForm />
+        </Route>
+        <Route exact path="/carlisting">
+          <CarListing />
+        </Route>
+        <Route exact path="/cardetail">
+          <CarDetail />
+        </Route>
+        <Route exact path="/faq">
+          <Faq />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
+        </Route>
+        <Route exact path="/caruserdetail">
+          <CarUserForm />
+        </Route>
+        <Route exact path="/bidsubscription">
+          <BidSubscription />
+        </Route>
+        <Route exact path="/eventform">
+          <AdminEventForms />
+        </Route>
       </Switch>
       <Footer />
     </BrowserRouter>

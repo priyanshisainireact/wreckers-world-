@@ -20,48 +20,44 @@ class Footer extends Component {
                 <div className="footerrow">
                   <div className="footercol">
                     <h5 className="footerheading">Top Brands </h5>
-                    <li className="FooterBrandLi">Home</li>
-                    <Link to="/about">
+                    <li className="FooterBrandLi"> Maruti</li>
+                    <Link to="">
                       {" "}
-                      <li className="FooterBrandLi">About Us</li>
+                      <li className="FooterBrandLi"> Hyundai</li>
                     </Link>
-                    <Link to="/carlisting">
-                      <li className="FooterBrandLi">Car Listing</li>
+                    <Link to="">
+                      <li className="FooterBrandLi"> Honda</li>
                     </Link>
-                    <Link to="/yardlisting">
+                    <Link to="">
                       {" "}
-                      <li className="FooterBrandLi">Yard Listing</li>
+                      <li className="FooterBrandLi"> Tata</li>
                     </Link>
-                    <Link to="/privacypolicy">
-                      <li className="FooterBrandLi">Privacy Policy</li>
+                    <Link to="">
+                      <li className="FooterBrandLi">Toyota</li>
                     </Link>
-                    <Link to="/terms&condition">
-                      <li className="FooterBrandLi">Terms and Conditions</li>
+                    <Link to="">
+                      <li className="FooterBrandLi">Chevrolet</li>
                     </Link>
                   </div>
                   <div className="footercol">
-                    <Link to="/sellingcar">
-                      <li className="FooterBrandLi">Selling a Car</li>
+                    <Link to="">
+                      <li className="FooterBrandLi">Mahindra</li>
                     </Link>
-                    <Link to="/towingprocess">
+                    <Link to="">
                       {" "}
-                      <li className="FooterBrandLi">Towing Process</li>
+                      <li className="FooterBrandLi"> Volkswagen</li>
                     </Link>
-                    <Link to="/inside-the-wreckers-world">
+                    <Link to="">
                       {" "}
-                      <li className="FooterBrandLi">
-                        Inside the Wreckers World
-                      </li>
+                      <li className="FooterBrandLi">Mercedes Benz</li>
                     </Link>
-                    <Link to="/carsalvage">
+                    <Link to="">
                       {" "}
-                      <li className="FooterBrandLi">
-                        How does a Car become Salvage?
-                      </li>
+                      <li className="FooterBrandLi">Mercedes Benz</li>
                     </Link>
-                    <Link to="/process">
+                    <Link to="">
                       {" "}
-                      <li className="FooterBrandLi">Process</li>
+                      <li className="FooterBrandLi">Mercedes Benz</li>
                     </Link>
                   </div>
                 </div>
@@ -138,6 +134,32 @@ class Footer extends Component {
                 </Link>
               </div>
             </div>
+            <div className="row flag">
+              <li className="flaglist">
+                <img
+                  src={"./avatars/download (1).png"}
+                  style={{ height: "40px", width: "90px" }}
+                />
+              </li>
+              <li className="flaglist">
+                <img
+                  src={"./avatars/download (2).png"}
+                  style={{ height: "40px", width: "90px" }}
+                />
+              </li>
+              <li className="flaglist">
+                <img
+                  src={"./avatars/download (3).png"}
+                  style={{ height: "40px", width: "90px" }}
+                />
+              </li>
+              <li className="flaglist">
+                <img
+                  src={"./avatars/download (4).png"}
+                  style={{ height: "40px", width: "90px" }}
+                />
+              </li>
+            </div>
           </div>
         </section>
         <section id="footerbottom">
@@ -145,6 +167,51 @@ class Footer extends Component {
             <div className="row">
               <div className="col-lg-12">
                 <h6 className="footer-heading">Australia</h6>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-lg-12">
+                <h6 className="footer-heading">New Zealand</h6>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-lg-12">
+                <h6 className="footer-heading">Canada</h6>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+                <li className="footer-li">Wreckers In Acacia Ridge</li>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-lg-12">
+                <h6 className="footer-heading">USA</h6>
                 <li className="footer-li">Wreckers In Acacia Ridge</li>
                 <li className="footer-li">Wreckers In Acacia Ridge</li>
                 <li className="footer-li">Wreckers In Acacia Ridge</li>

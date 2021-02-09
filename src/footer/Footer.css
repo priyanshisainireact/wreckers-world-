@@ -1,5 +1,5 @@
 section#footer {
-  background-color: #000;
+  background-color: #000000d1;
   color: #fff;
   padding: 18px 0px 18px 0px;
 }
@@ -14,7 +14,7 @@ section#footer {
   border-right: 1px solid #ffffff3b;
 }
 section#footerbottom {
-  background: #000000eb !important;
+  background: #2e2e2e !important;
 }
 .footer-li {
   display: inline;
@@ -61,4 +61,11 @@ li.FooterBrandLi {
   list-style: none;
   font-size: 13px;
   line-height: 27px;
+}
+li.flaglist {
+  display: inline;
+}
+.flag {
+  justify-content: center;
+  margin: 10px 0px;
 }
