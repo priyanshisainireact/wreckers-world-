@@ -126,7 +126,7 @@ img.pricebidimage {
   position: absolute;
   width: 30%;
   right: 5px;
-  bottom: 54px;
+  bottom: 24px;
 }
 p.greatdeal {
   background: #4dbc15;
@@ -170,4 +170,14 @@ button.formBtn {
   height: 40px;
   width: 200px;
   margin: 20px 0px;
+}
+h2.bidtitleinternal {
+  background: #00000094;
+  position: absolute;
+  color: #fff;
+  width: 86%;
+  bottom: 145px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 700;
 }

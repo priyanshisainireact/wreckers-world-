@@ -243,10 +243,6 @@ const CarUserForm = () => {
         <div className="col-lg-4">
           <Sidebar />
           <Sidebar />
-          <img
-            src={"./avatars/Banner.png"}
-            style={{ height: "auto", width: "60%" }}
-          />
         </div>
       </div>
     </div>
