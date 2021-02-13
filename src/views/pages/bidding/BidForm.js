@@ -133,7 +133,7 @@ const BidForm = () => {
                           <CInput
                             id="carDetail"
                             name="carDetail"
-                            placeholder="Name"
+                            placeholder="User Name"
                             value={userDetail.carDetail}
                             onChange={handleChange}
                           />
@@ -148,7 +148,7 @@ const BidForm = () => {
                           <CInput
                             id="name"
                             name="name"
-                            placeholder="Enter Name"
+                            placeholder="Owner Name"
                             value={userDetail.name}
                             onChange={handleChange}
                           />
@@ -159,7 +159,7 @@ const BidForm = () => {
                             name="phoneNumber"
                             value={userDetail.phoneNumber}
                             onChange={handleChange}
-                            placeholder="Enter Phone Number"
+                            placeholder=" Phone Number"
                           />
                         </CCol>
                       </CFormGroup>

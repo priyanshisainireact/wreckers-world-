@@ -21,8 +21,12 @@ import ResetPassword from "./views/pages/forgotpassword/ResetPassword";
 import Faq from "./views/pages/StaticPages/Faq";
 import Contact from "./views/pages/StaticPages/Contact";
 import CarUserForm from "./views/pages/profile/carUser";
+import YardUserForm from "./views/pages/profile/yardUser";
 import BidSubscription from "./views/pages/subscription/bidSubscription";
 import AdminEventForms from "./views/pages/admin/event/eventForm";
+import CaruserRating from "./views/pages/profile/carUserRating";
+import Admin from "./views/pages/admin/admin";
+
 // const loading = (
 //   <div className="pt-3 text-center">
 //     <div className="sk-spinner sk-spinner-pulse"></div>
@@ -124,6 +128,21 @@ const App = () => {
         </Route>
         <Route exact path="/eventform">
           <AdminEventForms />
+        </Route>
+        <Route exact path="/yarduserdetail">
+          <YardUserForm />
+        </Route>
+        <Route exact path="/caruserrating">
+          <CaruserRating />
+        </Route>
+        <Route exact path="/admin">
+          <Admin />
+        </Route>
+        <Route exact path="/yarduser">
+          <YardUserForm />
+        </Route>
+        <Route exact path="/caruser">
+          <CarUserForm />
         </Route>
       </Switch>
       <Footer />

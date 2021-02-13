@@ -1,0 +1,23 @@
+button.approve {
+  background: #4dbc15;
+  border: none;
+  color: #fff;
+  height: 35px;
+  width: 100px;
+}
+button.pending {
+  background: #156fbc;
+  border: none;
+  color: #fff;
+  height: 35px;
+  width: 100px;
+}
+button.notapprove {
+  background: #cb2027;
+  border: none;
+  color: #fff;
+  height: 35px;
+}
+table.table.table-hover {
+  margin-top: 25px;
+}

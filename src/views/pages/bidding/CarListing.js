@@ -3,6 +3,7 @@ import "./bidding.css";
 import { Link } from "react-router-dom";
 import ListingSidebar from "./Listingsidebar";
 import BiddingItem from "../homepage/HomepageItem/BiddingItem";
+
 class CarListing extends React.Component {
   render() {
     return (
@@ -208,6 +209,7 @@ class CarListing extends React.Component {
                     </div>
                   </div>
                 </div>
+
                 <div className="col-lg-4">
                   <div className="bid-card">
                     <img

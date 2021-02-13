@@ -36,7 +36,7 @@ import {
 import CIcon from "@coreui/icons-react";
 import { DocsLink } from "src/reusable";
 
-const CarUserForm = () => {
+const YardUserForm = () => {
   const [collapsed, setCollapsed] = React.useState(true);
   const [showElements, setShowElements] = React.useState(true);
   const [logoUpload, setLogoUpload] = React.useState([]);
@@ -77,7 +77,7 @@ const CarUserForm = () => {
             <CCol xs="12" md="12">
               <CCard>
                 <CCardHeader>
-                  <h2 class="form-news-heading">Car User</h2>
+                  <h2 class="form-news-heading">Yard User</h2>
                 </CCardHeader>
                 <CCardBody>
                   <CForm
@@ -253,4 +253,4 @@ const CarUserForm = () => {
   );
 };
 
-export default CarUserForm;
+export default YardUserForm;

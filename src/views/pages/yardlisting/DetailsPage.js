@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./yardlist.css";
 import Sidebar from "../sidebar/Sidebar";
 import { yardDetail } from "./yardDetail";
+import Rating from "../rating/rating";
+import RatingForm from "../rating/ratingForm";
 const DetailsPage = () => {
   const [yard, setYard] = useState(yardDetail[0]);
   console.log(yard);
@@ -87,7 +89,10 @@ const DetailsPage = () => {
               </li>
             </ul>
           </div>
-
+          <div className="rating">
+            <Rating />
+            <RatingForm />
+          </div>
           <div className="relateditem">
             <h5>Related Articles</h5>
             <div className="detailpictures">

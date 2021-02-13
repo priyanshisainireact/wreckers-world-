@@ -1,0 +1,17 @@
+.sideNav {
+  background: #f3f3f3;
+  zoom: 80%;
+  height: calc(100%) !important;
+  width: calc(100%);
+}
+li.sideNavList {
+  list-style: none;
+  padding: 10px;
+  margin: 20px;
+  background: #eaeaea;
+}
+.adminDashboard {
+  font-size: 23px;
+  padding: 20px 9px;
+  border-bottom: 1px solid #4dbc15;
+}
