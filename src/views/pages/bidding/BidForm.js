@@ -22,6 +22,7 @@ import CIcon from "@coreui/icons-react";
 import { DocsLink } from "src/reusable";
 import { dataCountries, dataStates, dataCities } from "./data.js";
 import { firestore } from "../../../firebase/firebase.utils";
+import CarPriceCalculator from "./CarPriceCalculator";
 
 const BidForm = () => {
   const [collapsed, setCollapsed] = React.useState(true);
@@ -31,6 +32,7 @@ const BidForm = () => {
   const [cityName, setCityName] = React.useState(null);
   const [uploadImage, setUploadImage] = React.useState([]);
   const [person, setPerson] = React.useState({});
+  const [isModal, setIsModal] = React.useState(false);
   const defaultState = {
     carDetail: "",
     name: "",
@@ -87,6 +89,9 @@ const BidForm = () => {
     setUserDetail({ ...userDetail, [name]: value });
   };
 
+  const toggle = () => {
+    setIsModal(!isModal);
+  };
   const hasState = stateName;
   const hasCity = cityName;
 
@@ -279,7 +284,7 @@ const BidForm = () => {
                           />
                         </CCol>
                       </CFormGroup>
-                      <CFormGroup row>
+                      <CFormGroup row style={{ margin: "0px" }}>
                         <CCol xs="12" md="9" lg="12">
                           <CInputFile
                             type="file"
@@ -297,10 +302,19 @@ const BidForm = () => {
                           </CLabel>
                         </CCol>
                       </CFormGroup>
+                      <div className="col-lg-12 text-center py-3">
+                        <button
+                          clasName="btn btn-lg btn-primary"
+                          onClick={toggle}
+                        >
+                          Check Car Price
+                        </button>
+                        {isModal && <CarPriceCalculator />}
+                      </div>
                     </div>
 
                     <div className="bidFormCard">
-                      <h2 className="formheading">Bidding Prefernces</h2>
+                      <h2 className="formheading">Bidding Preferences</h2>
                       <CFormGroup row>
                         <CCol xs="12" md="9" lg="6">
                           <CInput
