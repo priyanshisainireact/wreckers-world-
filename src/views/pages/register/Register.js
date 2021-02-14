@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./register.css";
+import CIcon from "@coreui/icons-react";
 import firebase, {
   auth,
   createUserProfileDocument,
@@ -18,42 +19,44 @@ import {
   CInputGroupText,
   CRow,
 } from "@coreui/react";
-import CIcon from "@coreui/icons-react";
 
 const Register = () => {
   const initialState = {
-    firstName: "",
-    lastName: "",
+    displayName: "",
     email: "",
     password: "",
     repeatPassword: "",
   };
-  const [userDetail, setUserDetail] = React.useState([]);
-  const [user, setuser] = React.useState(initialState);
-  const [isVerify, setIsVerify] = React.useState(false);
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    if (user.password !== user.repeatPassword) {
+  const [profile, setProfile] = useState(initialState);
+  const [isVerify, setIsVerify] = useState(false);
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setProfile({ ...profile, [name]: value });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const { displayName, email, password, repeatPassword } = profile;
+
+    if (password !== repeatPassword) {
       alert("passwords don't match");
       return;
     }
     try {
-      const { users } = await auth.createUserWithEmailAndPassword(
-        user.email,
-        user.password
+      const { user } = await auth.createUserWithEmailAndPassword(
+        email,
+        password
       );
-      await createUserProfileDocument(users, user.firstName);
-      setUserDetail(userDetail);
+
+      await createUserProfileDocument(user, { displayName });
       sendVerify();
+      setProfile(initialState);
+      setIsVerify(true);
+      setTimeout(() => {
+        setIsVerify(false);
+      }, 5000);
     } catch (error) {
       console.error(error);
     }
-    setIsVerify(true);
-    setTimeout(() => {
-      setIsVerify(false);
-    }, 5000);
-    setUserDetail(user);
-    setuser(initialState);
   };
   const sendVerify = () => {
     var user = firebase.auth().currentUser;
@@ -67,11 +70,6 @@ const Register = () => {
       });
   };
 
-  const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setuser({ ...user, [name]: value });
-  };
   return (
     <div className="c-app c-default-layout flex-row align-items-center">
       <CContainer>
@@ -91,26 +89,12 @@ const Register = () => {
                     </CInputGroupPrepend>
                     <CInput
                       type="text"
-                      name="firstName"
-                      value={user.firstName}
+                      name="displayName"
                       onChange={handleChange}
-                      placeholder="First Name"
-                      autoComplete="First Name"
-                    />
-                  </CInputGroup>
-                  <CInputGroup className="mb-3">
-                    <CInputGroupPrepend>
-                      <CInputGroupText>
-                        <CIcon name="cil-user" />
-                      </CInputGroupText>
-                    </CInputGroupPrepend>
-                    <CInput
-                      type="text"
-                      name="lastName"
-                      value={user.lastName}
-                      onChange={handleChange}
-                      placeholder="Last Name"
-                      autoComplete="Last Name"
+                      value={profile.displayName}
+                      placeholder="Display Name"
+                      autoComplete="Display Name"
+                      required
                     />
                   </CInputGroup>
 
@@ -121,10 +105,11 @@ const Register = () => {
                     <CInput
                       type="text"
                       name="email"
-                      value={user.email}
                       onChange={handleChange}
+                      value={profile.email}
                       placeholder="Email"
                       autoComplete="email"
+                      required
                     />
                   </CInputGroup>
 
@@ -137,10 +122,11 @@ const Register = () => {
                     <CInput
                       type="password"
                       name="password"
-                      value={user.password}
                       onChange={handleChange}
+                      value={profile.password}
                       placeholder="Password"
                       autoComplete="new-password"
+                      required
                     />
                   </CInputGroup>
                   <CInputGroup className="mb-4">
@@ -152,10 +138,11 @@ const Register = () => {
                     <CInput
                       type="password"
                       name="repeatPassword"
-                      value={user.repeatPassword}
                       onChange={handleChange}
+                      value={profile.repeatPassword}
                       placeholder="Repeat password"
                       autoComplete="new-password"
+                      required
                     />
                   </CInputGroup>
                   <CButton color="success" type="submit" block>
