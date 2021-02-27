@@ -6,7 +6,7 @@ const CaruserProfile = () => {
   return (
     <div className="container">
       <div class="row">
-        <h2 class="news-heading">Heading !</h2>
+        <h2 class="news-heading zoom">Car User Profile</h2>
       </div>
       <div className="row">
         <div className="col-lg-4 zoom">
@@ -60,6 +60,9 @@ const CaruserProfile = () => {
           </div>
         </div>
         <div className="col-lg-8 zoom">
+          <button type="button" className="addcarbtn">
+            Add Car
+          </button>
           <div className="row">
             <div className="col-lg-6">
               <div className="caruserbidrow">

@@ -88,3 +88,79 @@ h4.profhead {
   background: #f3f4f6;
   box-shadow: 2px 2px 2px 2px #4a4a4a1a;
 }
+.userBtn {
+  background: #4dbc15;
+  color: #fff;
+  width: 200px;
+  height: 40px;
+  border: none;
+}
+.chooseUserCard {
+  border-right: 1px solid #d8d8d8;
+  margin-top: 40px;
+}
+.chooseuesr {
+  margin-top: 40px;
+}
+
+.addcarbtn {
+  background: #4dbc15;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  height: 40px;
+  width: 140px;
+  margin-bottom: 20px;
+}
+.bid-card-user-detail {
+  width: 100%;
+  border: 1px solid #e2e2e2;
+  background: #4dbc151a;
+}
+.timersection {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.timerfirst {
+  border-right: 1px solid #e2e2e2;
+  padding: 0px 16px;
+}
+i.fa.fa-clock-o {
+  font-size: 50px;
+  font-weight: 100;
+  color: black;
+}
+.notice {
+  background: #fff;
+
+  padding: 5px;
+}
+.rankSecond {
+  display: flex;
+  padding: 15px 0px;
+}
+.greatdealrank {
+  background: #4dbc15;
+  width: 20%;
+  position: absolute;
+  bottom: 60%;
+  text-align: center;
+  color: #fff;
+}
+.border-right {
+  border-right: 1px solid #dee2e6 !important;
+  padding: 3px 10px;
+  color: #a2a2a2;
+}
+.rankSecondOne {
+  width: 100%;
+}
+.rankSecondTwo {
+  padding: 12px;
+}
+.rankCard {
+  border: 1px solid #e2e2e2;
+  padding: 10px;
+}

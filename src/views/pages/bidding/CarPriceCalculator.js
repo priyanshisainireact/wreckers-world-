@@ -101,7 +101,7 @@ const CarPriceCalculator = () => {
               </select>
             </div>
           </div>
-          <input type="submit" value="submit" />
+          <input type="submit" value="submit" className="formBtn" />
         </div>
       </form>
       <form onSubmit={handleFormSubmit}>

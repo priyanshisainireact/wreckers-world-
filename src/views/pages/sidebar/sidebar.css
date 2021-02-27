@@ -29,3 +29,13 @@
 .sidebarlist:hover {
   color: #4dbc15;
 }
+.sidebarAdd {
+  background: #4dbc15;
+  color: #fff;
+  padding: 12px;
+  margin: 20px 0px;
+}
+.sidebarAddTitle {
+  font-weight: 600;
+  font-size: 25px;
+}

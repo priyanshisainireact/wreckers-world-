@@ -36,7 +36,7 @@ import {
 import CIcon from "@coreui/icons-react";
 import { DocsLink } from "src/reusable";
 
-const BasicForms = () => {
+const BlogForm = () => {
   const [collapsed, setCollapsed] = React.useState(true);
   const [showElements, setShowElements] = React.useState(true);
   const [logoUpload, setLogoUpload] = React.useState([]);
@@ -70,88 +70,59 @@ const BasicForms = () => {
     });
   };
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-8">
-          <CRow>
-            <CCol xs="12" md="12">
-              <CCard>
-                <CCardHeader>
-                  <h2 class="form-news-heading">List Your Yard</h2>
-                </CCardHeader>
-                <CCardBody>
-                  <CForm
-                    // onSubmit={}
-                    encType="multipart/form-data"
-                    className="form-horizontal"
-                  >
-                    <CFormGroup row>
-                      {/* <CCol md="3">
+    <CRow>
+      <CCol xs="12" md="12">
+        <CCard>
+          <CCardHeader>
+            <h2 class="form-news-heading">Add Blog</h2>
+          </CCardHeader>
+          <CCardBody>
+            <div className="bidFormCard">
+              <CForm
+                // onSubmit={}
+                encType="multipart/form-data"
+                className="form-horizontal"
+              >
+                <CFormGroup row>
+                  {/* <CCol md="3">
                     <CLabel htmlFor="text-input">Name Of Yard *</CLabel>
                   </CCol> */}
-                      <CCol xs="12" md="9" lg="12">
-                        <CInput
-                          id="title"
-                          name="title"
-                          placeholder="Enter Title"
-                          value={}
-                          onChange={}
-                        />
-                      </CCol>
-                    </CFormGroup>
+                  <CCol xs="12" md="9" lg="12">
+                    <CInput id="title" name="title" placeholder="Enter Title" />
+                  </CCol>
+                </CFormGroup>
 
-                    <CFormGroup row>
-                      <CCol xs="12" md="9" lg="12">
-                        <CInputFile
-                          custom
-                          id="logo"
-                          type="file"
-                          name="logo"
-                          onChange={}
-                        />
-                        <CLabel
-                          htmlFor="custom-file-input"
-                          variant="custom-file"
-                        >
-                          Choose Logo
-                        </CLabel>
-                      </CCol>
-                    </CFormGroup>
+                <CFormGroup row>
+                  <CCol xs="12" md="9" lg="12">
+                    <CInputFile custom id="logo" type="file" name="logo" />
+                    <CLabel htmlFor="custom-file-input" variant="custom-file">
+                      Choose Logo
+                    </CLabel>
+                  </CCol>
+                </CFormGroup>
 
-                    <CFormGroup row>
-                      <CCol xs="12" md="9" lg="12">
-                        <CTextarea
-                          name="additionalInfo"
-                          id="additionalInfo"
-                          rows="9"
-                          placeholder="Additional Information"
-                          value={}
-                          onChange={}
-                        />
-                      </CCol>
-                    </CFormGroup>
-                    <CCardFooter>
-                      <CButton type="submit" size="sm" color="primary">
-                        <CIcon name="cil-scrubber" /> Submit
-                      </CButton>
-                    </CCardFooter>
-                  </CForm>
-                </CCardBody>
-              </CCard>
-            </CCol>
-          </CRow>
-        </div>
-        <div className="col-lg-4">
-          <Sidebar />
-          <Sidebar />
-          <img
-            src={"./avatars/Banner.png"}
-            style={{ height: "auto", width: "60%" }}
-          />
-        </div>
-      </div>
-    </div>
+                <CFormGroup row>
+                  <CCol xs="12" md="9" lg="12">
+                    <CTextarea
+                      name="additionalInfo"
+                      id="additionalInfo"
+                      rows="9"
+                      placeholder="Additional Information"
+                    />
+                  </CCol>
+                </CFormGroup>
+                <CCardFooter>
+                  <CButton type="submit" size="sm" color="primary">
+                    <CIcon name="cil-scrubber" /> Submit
+                  </CButton>
+                </CCardFooter>
+              </CForm>
+            </div>
+          </CCardBody>
+        </CCard>
+      </CCol>
+    </CRow>
   );
 };
 
-export default BasicForms;
+export default BlogForm;

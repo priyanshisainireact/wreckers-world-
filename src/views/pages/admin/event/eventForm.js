@@ -70,111 +70,113 @@ const AdminEventForms = () => {
     });
   };
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-8">
-          <CRow>
-            <CCol xs="12" md="12">
-              <CCard>
-                <CCardHeader>
-                  <h2 class="form-news-heading"> Event</h2>
-                </CCardHeader>
-                <CCardBody>
-                  <CForm
-                    onSubmit={yardSubmit}
-                    encType="multipart/form-data"
-                    className="form-horizontal"
-                  >
-                    <CFormGroup row>
-                      {/* <CCol md="3">
-                    <CLabel htmlFor="text-input">Name Of Yard *</CLabel>
-                  </CCol> */}
-                      <CCol xs="12" md="9" lg="12">
-                        <CInput
-                          id="yardName"
-                          name="yardName"
-                          placeholder="Event Title"
-                          value={yardDetail.yardName}
-                          onChange={inputChange}
-                        />
-                      </CCol>
-                    </CFormGroup>
-                    <CFormGroup row>
-                      <CCol xs="12" md="9" lg="12">
-                        <CTextarea
-                          name="additionalInfo"
-                          id="additionalInfo"
-                          rows="9"
-                          placeholder="Additional Information"
-                          value={yardDetail.additionalInfo}
-                          onChange={inputChange}
-                        />
-                      </CCol>
-                    </CFormGroup>
-
-                    <CFormGroup row>
-                      <CCol xs="12" md="9" lg="6">
-                        <CInput
-                          id="service"
-                          name="service"
-                          placeholder="Enter Services provided by the business"
-                          value={yardDetail.service}
-                          onChange={inputChange}
-                        />
-                      </CCol>
-
-                      <CCol xs="12" md="9" lg="6">
-                        <CInputFile
-                          id="yardImage"
-                          name="yardImage"
-                          type="file"
-                          multiple
-                          custom
-                          onChange={UploadYardImage}
-                        />
-                        <CLabel
-                          htmlFor="file-multiple-input"
-                          variant="custom-file"
-                        >
-                          Choose Pictures of Yard
-                        </CLabel>
-                      </CCol>
-                    </CFormGroup>
-
-                    <CFormGroup row>
-                      <CCol xs="12" md="9" lg="12">
-                        <CTextarea
-                          name="additionalInfo"
-                          id="additionalInfo"
-                          rows="9"
-                          placeholder="Additional Information"
-                          value={yardDetail.additionalInfo}
-                          onChange={inputChange}
-                        />
-                      </CCol>
-                    </CFormGroup>
-                    <CCardFooter>
-                      <CButton type="submit" size="sm" color="primary">
-                        <CIcon name="cil-scrubber" /> Submit
-                      </CButton>
-                      <CButton type="reset" size="sm" color="danger">
-                        <CIcon name="cil-ban" /> Reset
-                      </CButton>
-                    </CCardFooter>
-                  </CForm>
-                </CCardBody>
-              </CCard>
+    <CCard style={{ zoom: "100%" }}>
+      <CCardHeader>
+        <h2 class="form-news-heading"> Event</h2>
+      </CCardHeader>
+      <CCardBody>
+        <CForm
+          onSubmit={yardSubmit}
+          encType="multipart/form-data"
+          className="form-horizontal"
+        >
+          <CFormGroup row>
+            <CCol xs="12" md="9" lg="12">
+              <CInput
+                id="yardName"
+                name="yardName"
+                placeholder="Event Title"
+                value={yardDetail.yardName}
+                onChange={inputChange}
+              />
             </CCol>
-          </CRow>
-        </div>
-        <div className="col-lg-4">
-          <img
-            src={"./avatars/Banner.png"}
-            style={{ height: "auto", width: "60%" }}
-          />
-        </div>
-      </div>
-    </div>
+          </CFormGroup>
+
+          <CFormGroup row>
+            <CCol xs="12" md="9" lg="6">
+              <CInput
+                id="service"
+                name="service"
+                placeholder="Address"
+                value={yardDetail.service}
+                onChange={inputChange}
+              />
+            </CCol>
+
+            <CCol xs="12" md="9" lg="6">
+              <CInputFile
+                id="yardImage"
+                name="yardImage"
+                type="file"
+                multiple
+                custom
+                onChange={UploadYardImage}
+              />
+              <CLabel htmlFor="file-multiple-input" variant="custom-file">
+                Choose Pictures of Event
+              </CLabel>
+            </CCol>
+          </CFormGroup>
+          <CFormGroup row>
+            <CCol xs="12" md="9" lg="6">
+              <CInput
+                id="service"
+                name="service"
+                placeholder="Start Date"
+                value={yardDetail.service}
+                onChange={inputChange}
+              />
+            </CCol>
+
+            <CCol xs="12" md="9" lg="6">
+              <CInput
+                id="service"
+                name="service"
+                placeholder="End Date"
+                value={yardDetail.service}
+                onChange={inputChange}
+              />
+            </CCol>
+          </CFormGroup>
+          <CFormGroup row>
+            <CCol xs="12" md="9" lg="6">
+              <CInput
+                id="service"
+                name="service"
+                placeholder="Start Time"
+                value={yardDetail.service}
+                onChange={inputChange}
+              />
+            </CCol>
+
+            <CCol xs="12" md="9" lg="6">
+              <CInput
+                id="service"
+                name="service"
+                placeholder="End Time"
+                value={yardDetail.service}
+                onChange={inputChange}
+              />
+            </CCol>
+          </CFormGroup>
+          <CFormGroup row>
+            <CCol xs="12" md="9" lg="12">
+              <CTextarea
+                name="additionalInfo"
+                id="additionalInfo"
+                rows="9"
+                placeholder="Event Description"
+                value={yardDetail.additionalInfo}
+                onChange={inputChange}
+              />
+            </CCol>
+            <CButton type="submit" size="sm" color="primary">
+              <CIcon name="cil-scrubber" /> Submit
+            </CButton>
+          </CFormGroup>
+        </CForm>
+      </CCardBody>
+    </CCard>
   );
 };
 

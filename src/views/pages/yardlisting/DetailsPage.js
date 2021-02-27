@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./yardlist.css";
 import Sidebar from "../sidebar/Sidebar";
 import { yardDetail } from "./yardDetail";
+import Rating from "../rating/rating";
+import RatingForm from "../rating/ratingForm";
 import { firestore } from "../../../firebase/firebase.utils";
 
 const DetailsPage = () => {
@@ -42,7 +44,6 @@ const DetailsPage = () => {
                   <div className="yardlogo">
                     <img src={yard.logoImage} />
                   </div>
-
                   <div className="yarddetail">
                     <h2 className="Detail-heading">{yard.yardName} </h2>
                     <p className="email">
@@ -58,7 +59,6 @@ const DetailsPage = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="socialmedia">
                   <a href={yard.FacebookLink} class="fa fa-facebook">
                     {" "}
@@ -79,37 +79,52 @@ const DetailsPage = () => {
                 </div>
                 <div className="detailpictures">
                   <div className="pictureone">
-                    <img src={yard.yardFirstImage} />
+                    <img src={yard.Image1} />
                   </div>
                   <div className="pictureone">
-                    <img src={yard.yardSecondImage} />
+                    <img src={yard.Image2} />
                   </div>
                   <div className="pictureone">
-                    <img src={yard.yardThirdImage} />
+                    <img src={yard.Image3} />
+                  </div>
+                  <div className="pictureone">
+                    <img src={yard.Image4} />
                   </div>
                 </div>
                 <div className="listingdetails">
                   <ul className="formlist">
+                    {/* 
+                      <li className="listcontent">
+                        <span>Contact Number:</span> 0402 639 249
+                      </li>
+                      <li className="listcontent">
+                        <span>Email Address:</span> samircarremoval@gmail.com
+                      </li>
+                      */}
                     <li className="listcontent">
-                      <span>Country :</span> {yard.country}
+                      <span>Country :</span> {yard.Country}
                     </li>
                     <li className="listcontent">
-                      <span>City Name:</span> {yard.city}
+                      <span>City Name:</span> {yard.City}
                     </li>
                     <li className="listcontent">
                       <span>Website link of the business:</span>{" "}
-                      {yard.websiteLink}
+                      {yard.WebsiteUrl}
                     </li>
                     <li className="listcontent">
                       <span>Services provided by the business:</span>{" "}
-                      {/* {yard.Services.service1}, {yard.Services.service2} */}
+                      {yard.Services.service1}, {yard.Services.service2}
                     </li>
                     <li className="listcontent">
-                      <span>Additional Information:</span> {yard.description}
+                      <span>Additional Information:</span>{" "}
+                      {yard.AdditionalInformation}
                     </li>
                   </ul>
                 </div>
-
+                <div className="rating">
+                  <Rating />
+                  <RatingForm />
+                </div>
                 <div className="relateditem">
                   <h5>Related Articles</h5>
                   <div className="detailpictures">
@@ -149,7 +164,6 @@ const DetailsPage = () => {
             );
           })}
         </div>
-
         <div className="col-lg-4">
           <Sidebar />
           <Sidebar />

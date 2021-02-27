@@ -124,7 +124,7 @@ const BidForm = () => {
                           <CInput
                             id="carDetail"
                             name="carDetail"
-                            placeholder="Name"
+                            placeholder="User Name"
                             value={userDetail.carDetail}
                             onChange={handleChange}
                           />
@@ -139,7 +139,7 @@ const BidForm = () => {
                           <CInput
                             id="name"
                             name="name"
-                            placeholder="Enter Name"
+                            placeholder="Owner Name"
                             value={userDetail.name}
                             onChange={handleChange}
                           />
@@ -150,7 +150,7 @@ const BidForm = () => {
                             name="phoneNumber"
                             value={userDetail.phoneNumber}
                             onChange={handleChange}
-                            placeholder="Enter Phone Number"
+                            placeholder=" Phone Number"
                           />
                         </CCol>
                       </CFormGroup>
@@ -343,10 +343,17 @@ const BidForm = () => {
         <div className="col-lg-4" lg="6">
           <Sidebar />
           <Sidebar />
-          <img
-            src={"./avatars/Banner.png"}
-            style={{ height: "auto", width: "60%" }}
-          />
+          <div className="row">
+            <div className="col-lg-6">
+              <img src={"./avatars/Banner.png"} style={{ height: "auto" }} />
+            </div>
+            <div className="col-lg-6">
+              <img
+                src={"./avatars/samirBannerAd1.png"}
+                style={{ height: "auto" }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

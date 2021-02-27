@@ -126,7 +126,7 @@ img.pricebidimage {
   position: absolute;
   width: 30%;
   right: 5px;
-  bottom: 54px;
+  bottom: 35px;
 }
 p.greatdeal {
   background: #4dbc15;
@@ -171,6 +171,29 @@ button.formBtn {
   width: 200px;
   margin: 20px 0px;
 }
-.font {
-  font-weight: 600;
+h2.bidtitleinternal {
+  background: #00000094;
+  position: absolute;
+  color: #fff;
+  width: 86%;
+  bottom: 173px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 700;
+}
+p.bidpricelist {
+  background: #4dbc1526;
+  width: 50%;
+  font-size: 25px !important;
+  text-align: center;
+  font-weight: 700;
+}
+span.salePrice {
+  color: #adadad;
+  font-weight: 200;
+}
+button.btn.btn-lg.carPrice.zoom {
+  color: #fff;
+  background-color: #4dbc15;
+  border-color: #4dbc15;
 }
