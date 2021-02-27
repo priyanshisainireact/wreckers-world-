@@ -3,14 +3,14 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const config = {
-    apiKey: "AIzaSyAxggw4sjnmtLZJHwFHULwadXJv4EF5nX4",
-    authDomain: "wreckersworld-12.firebaseapp.com",
-    databaseURL: "https://wreckersworld-12-default-rtdb.firebaseio.com",
-    projectId: "wreckersworld-12",
-    storageBucket: "wreckersworld-12.appspot.com",
-    messagingSenderId: "639934535542",
-    appId: "1:639934535542:web:141d6c9ac5ab5eae41cc57"
-  };
+  apiKey: "AIzaSyAxggw4sjnmtLZJHwFHULwadXJv4EF5nX4",
+  authDomain: "wreckersworld-12.firebaseapp.com",
+  databaseURL: "https://wreckersworld-12-default-rtdb.firebaseio.com",
+  projectId: "wreckersworld-12",
+  storageBucket: "wreckersworld-12.appspot.com",
+  messagingSenderId: "639934535542",
+  appId: "1:639934535542:web:141d6c9ac5ab5eae41cc57",
+};
 
 firebase.initializeApp(config);
 

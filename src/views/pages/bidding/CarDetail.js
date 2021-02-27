@@ -2,7 +2,7 @@ import React from "react";
 import "./bidding.css";
 import { Link } from "react-router-dom";
 import Sidebar from "../sidebar/Sidebar";
-import { CCol, CFormGroup, CLabel, CInput } from "@coreui/react";
+import { CCol, CFormGroup, CLabel, CInput, CSelect } from "@coreui/react";
 class CarDetail extends React.Component {
   render() {
     return (
@@ -69,8 +69,21 @@ class CarDetail extends React.Component {
                         name="text-input"
                         placeholder="in $AUD "
                       />
-                      <p>(Enter 100.00 or more)</p>
                     </CCol>
+                  </CFormGroup>
+                  <CFormGroup row>
+                    <CSelect
+                      custom
+                      name="state"
+                      id="state"
+
+                      // onChange={handleChangeState}
+                    >
+                      <option value="0">Please select your Yard</option>
+                      <option value="1">Option #1</option>
+                      <option value="2">Option #2</option>
+                      <option value="3">Option #3</option>
+                    </CSelect>
                   </CFormGroup>
                   <button type="button" className="bidplace">
                     Place Bid

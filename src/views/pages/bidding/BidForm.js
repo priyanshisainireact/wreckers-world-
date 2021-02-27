@@ -8,26 +8,11 @@ import {
   CCardFooter,
   CCardHeader,
   CCol,
-  CCollapse,
-  CDropdownItem,
-  CDropdownMenu,
-  CDropdownToggle,
-  CFade,
   CForm,
   CFormGroup,
-  CFormText,
-  CValidFeedback,
-  CInvalidFeedback,
   CTextarea,
   CInput,
   CInputFile,
-  CInputCheckbox,
-  CInputRadio,
-  CInputGroup,
-  CInputGroupAppend,
-  CInputGroupPrepend,
-  CDropdown,
-  CInputGroupText,
   CLabel,
   CSelect,
   CRow,
@@ -36,6 +21,8 @@ import {
 import CIcon from "@coreui/icons-react";
 import { DocsLink } from "src/reusable";
 import { dataCountries, dataStates, dataCities } from "./data.js";
+import { firestore } from "../../../firebase/firebase.utils";
+import CarPriceCalculator from "./CarPriceCalculator";
 
 const BidForm = () => {
   const [collapsed, setCollapsed] = React.useState(true);
@@ -44,14 +31,9 @@ const BidForm = () => {
   const [stateName, setStateName] = React.useState(null);
   const [cityName, setCityName] = React.useState(null);
   const [uploadImage, setUploadImage] = React.useState([]);
-  const [person, setPerson] = React.useState([]);
-
-  const [updatecheckbox, setUpdateCheckbox] = React.useState({
-    paymentMethodCheck: false,
-    paymentMethodCash: false,
-    paymentMethodCard: false,
-  });
-  const [userDetail, setUserDetail] = React.useState({
+  const [person, setPerson] = React.useState({});
+  const [isModal, setIsModal] = React.useState(false);
+  const defaultState = {
     carDetail: "",
     name: "",
     phoneNumber: "",
@@ -66,28 +48,25 @@ const BidForm = () => {
     endingDate: "",
     service: "",
     additionalInformation: "",
+  };
+
+  const [userDetail, setUserDetail] = React.useState(defaultState);
+
+  const [updatecheckbox, setUpdateCheckbox] = React.useState({
+    paymentMethodCheck: false,
+    paymentMethodCash: false,
+    paymentMethodCard: false,
   });
 
+  React.useEffect(() => {
+    const personNew = person;
+    firestore.collection("carList").add({ personNew });
+  }, [person]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    setPerson({ ...userDetail, image: { ...uploadImage }, ...updatecheckbox });
+    setPerson({ ...userDetail });
 
-    setUserDetail({
-      carDetail: "",
-      name: "",
-      phoneNumber: "",
-      email: "",
-      country: "",
-      state: "",
-      city: "",
-      vinNumber: "",
-      openingPrice: "",
-      lowestPrice: "",
-      incrementalvalue: "",
-      endingDate: "",
-      service: "",
-      additionalInformation: "",
-    });
+    setUserDetail(defaultState);
     setUploadImage([]);
     setUpdateCheckbox({
       paymentMethodCheck: false,
@@ -110,6 +89,9 @@ const BidForm = () => {
     setUserDetail({ ...userDetail, [name]: value });
   };
 
+  const toggle = () => {
+    setIsModal(!isModal);
+  };
   const hasState = stateName;
   const hasCity = cityName;
 
@@ -320,10 +302,19 @@ const BidForm = () => {
                           </CLabel>
                         </CCol>
                       </CFormGroup>
+                      <div className="col-lg-12 text-center py-3">
+                        <button
+                          className="btn btn-lg carPrice zoom"
+                          onClick={toggle}
+                        >
+                          Check Car Price
+                        </button>
+                        {isModal && <CarPriceCalculator />}
+                      </div>
                     </div>
 
                     <div className="bidFormCard">
-                      <h2 className="formheading">Bidding Prefernces</h2>
+                      <h2 className="formheading">Bidding Preferences</h2>
                       <CFormGroup row>
                         <CCol xs="12" md="9" lg="6">
                           <CInput

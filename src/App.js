@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 // import './scss/style.scss';
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
@@ -27,6 +27,12 @@ import AdminEventForms from "./views/pages/admin/event/eventForm";
 import CaruserRating from "./views/pages/profile/carUserRating";
 import Admin from "./views/pages/admin/admin";
 
+import {
+  auth,
+  firebase,
+  createUserProfileDocument,
+} from "./firebase/firebase.utils";
+import ChooseProfile from "./views/pages/profile/ChooseProfile";
 // const loading = (
 //   <div className="pt-3 text-center">
 //     <div className="sk-spinner sk-spinner-pulse"></div>
@@ -67,9 +73,28 @@ import Admin from "./views/pages/admin/admin";
 // }
 
 const App = () => {
+  const [currentUser, setCurrentUser] = React.useState(null);
+  const [isLogin, setIsLogin] = React.useState(false);
+  React.useEffect(() => {
+    let unsubscribeFromAuth = null;
+    unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+        userRef.onSnapshot((snapShot) => {
+          setCurrentUser({ id: snapShot.id, ...snapShot.data() });
+        });
+      }
+      setCurrentUser({ userAuth });
+      setIsLogin(true);
+    });
+    return () => {
+      unsubscribeFromAuth();
+      setIsLogin(false);
+    };
+  }, []);
   return (
     <BrowserRouter>
-      <Header />
+      <Header currentUser={currentUser} />
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/homepage">
@@ -143,6 +168,9 @@ const App = () => {
         </Route>
         <Route exact path="/caruser">
           <CarUserForm />
+        </Route>
+        <Route exact path="/chooseprofile">
+          <ChooseProfile />
         </Route>
       </Switch>
       <Footer />
