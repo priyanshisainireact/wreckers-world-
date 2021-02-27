@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./bidding.css";
 import Sidebar from "../sidebar/Sidebar";
 import {
@@ -22,7 +22,10 @@ import CIcon from "@coreui/icons-react";
 import { DocsLink } from "src/reusable";
 import { dataCountries, dataStates, dataCities } from "./data.js";
 import { firestore } from "../../../firebase/firebase.utils";
+import CarInfo from "./CarInfo";
 import CarPriceCalculator from "./CarPriceCalculator";
+
+import axios from "axios";
 
 const BidForm = () => {
   const [collapsed, setCollapsed] = React.useState(true);
@@ -33,15 +36,20 @@ const BidForm = () => {
   const [uploadImage, setUploadImage] = React.useState([]);
   const [person, setPerson] = React.useState({});
   const [isModal, setIsModal] = React.useState(false);
+
+  const toggle = () => {
+    setIsModal(!isModal);
+  };
+
   const defaultState = {
     carDetail: "",
     name: "",
-    phoneNumber: "",
+
     email: "",
     country: "",
     state: "",
     city: "",
-    vinNumber: "",
+
     openingPrice: "",
     lowestPrice: "",
     incrementalvalue: "",
@@ -89,11 +97,12 @@ const BidForm = () => {
     setUserDetail({ ...userDetail, [name]: value });
   };
 
-  const toggle = () => {
-    setIsModal(!isModal);
-  };
   const hasState = stateName;
   const hasCity = cityName;
+
+  // React.useEffect(() => {
+
+  // }, [userDetail.vinNumber]);
 
   return (
     <div className="container">
@@ -221,97 +230,7 @@ const BidForm = () => {
                         </CCol>
                       </CFormGroup>
                     </div>
-
-                    <div className="bidFormCard">
-                      <h2 className="formheading">Car Details</h2>
-                      <CFormGroup row>
-                        <CCol xs="12" md="9" lg="6">
-                          <CInput
-                            id="name"
-                            name="name"
-                            placeholder="Owner Name"
-                            value={userDetail.name}
-                            onChange={handleChange}
-                          />
-                        </CCol>
-                        <CCol xs="12" md="9" lg="6">
-                          <CInput
-                            id="phoneNumber"
-                            name="phoneNumber"
-                            value={userDetail.phoneNumber}
-                            onChange={handleChange}
-                            placeholder="VIN NUMBER"
-                          />
-                        </CCol>
-                      </CFormGroup>
-                      <CFormGroup row>
-                        <CCol xs="12" md="9" lg="6">
-                          <CInput
-                            id="name"
-                            name="name"
-                            placeholder="CarMake"
-                            value={userDetail.name}
-                            onChange={handleChange}
-                          />
-                        </CCol>
-                        <CCol xs="12" md="9" lg="6">
-                          <CInput
-                            id="phoneNumber"
-                            name="phoneNumber"
-                            value={userDetail.phoneNumber}
-                            onChange={handleChange}
-                            placeholder="CarModel"
-                          />
-                        </CCol>
-                      </CFormGroup>
-                      <CFormGroup row>
-                        <CCol xs="12" md="9" lg="6">
-                          <CInput
-                            id="name"
-                            name="name"
-                            placeholder="Registartion Number"
-                            value={userDetail.name}
-                            onChange={handleChange}
-                          />
-                        </CCol>
-                        <CCol xs="12" md="9" lg="6">
-                          <CInput
-                            id="phoneNumber"
-                            name="phoneNumber"
-                            value={userDetail.phoneNumber}
-                            onChange={handleChange}
-                            placeholder="Year Of Manufacture"
-                          />
-                        </CCol>
-                      </CFormGroup>
-                      <CFormGroup row style={{ margin: "0px" }}>
-                        <CCol xs="12" md="9" lg="12">
-                          <CInputFile
-                            type="file"
-                            id="image"
-                            name="image"
-                            multiple
-                            custom
-                            onChange={handleImageChange}
-                          />
-                          <CLabel
-                            htmlFor="file-multiple-input"
-                            variant="custom-file"
-                          >
-                            Choose Pictures Of Car
-                          </CLabel>
-                        </CCol>
-                      </CFormGroup>
-                      <div className="col-lg-12 text-center py-3">
-                        <button
-                          className="btn btn-lg carPrice zoom"
-                          onClick={toggle}
-                        >
-                          Check Car Price
-                        </button>
-                        {isModal && <CarPriceCalculator />}
-                      </div>
-                    </div>
+                    <CarInfo />
 
                     <div className="bidFormCard">
                       <h2 className="formheading">Bidding Preferences</h2>
@@ -381,6 +300,15 @@ const BidForm = () => {
                           </div>
                         </CCol>
                       </CFormGroup>
+                      <div className="col-lg-12 text-center py-3">
+                        <button
+                          clasName="btn btn-lg btn-primary"
+                          onClick={toggle}
+                        >
+                          Check Car Price
+                        </button>
+                        {isModal && <CarPriceCalculator />}
+                      </div>
                     </div>
                     <div className="bidFormCard">
                       <h2 className="formheading">Additional Detail</h2>

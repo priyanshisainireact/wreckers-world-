@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./bidding.css";
 
 const CarPriceCalculator = () => {
@@ -10,6 +10,7 @@ const CarPriceCalculator = () => {
     carMake: "",
     vehicleType: "",
   };
+  const [carAge, setCarAge] = useState(0);
   const [carDetail, setCarDetail] = React.useState(initialCarDetail);
   const handleChange = (e) => {
     setCarDetail({ ...carDetail, [e.target.name]: e.target.value });

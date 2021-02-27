@@ -24,6 +24,8 @@ import CarUserForm from "./views/pages/profile/carUser";
 import YardUserForm from "./views/pages/profile/yardUser";
 import BidSubscription from "./views/pages/subscription/bidSubscription";
 import AdminEventForms from "./views/pages/admin/event/eventForm";
+// import CarUserForm from "./views/pages/profile/carUser";
+import YardUserForm from "./views/pages/profile/yardUser";
 import CaruserRating from "./views/pages/profile/carUserRating";
 import Admin from "./views/pages/admin/admin";
 
@@ -130,7 +132,11 @@ const App = () => {
         <Route exact path="/resetpassword">
           <ResetPassword />
         </Route>
-        <Route exact path="/bidform">
+        <Route
+          exact
+          path="/bidform"
+          // render={() => (currentUser ? <Redirect to="/" /> : <BidForm />)}
+        >
           <BidForm />
         </Route>
         <Route exact path="/carlisting">
@@ -145,7 +151,7 @@ const App = () => {
         <Route exact path="/contact">
           <Contact />
         </Route>
-        <Route exact path="/caruserdetail">
+        <Route exact path="/caruserdetail" currentUser={currentUser}>
           <CarUserForm />
         </Route>
         <Route exact path="/bidsubscription">
