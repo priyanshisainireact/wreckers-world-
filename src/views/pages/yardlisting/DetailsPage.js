@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./yardlist.css";
 import Sidebar from "../sidebar/Sidebar";
-import { yardDetail } from "./yardDetail";
+
 import Rating from "../rating/rating";
 import RatingForm from "../rating/ratingForm";
 import { firestore } from "../../../firebase/firebase.utils";
@@ -113,11 +113,10 @@ const DetailsPage = () => {
                     </li>
                     <li className="listcontent">
                       <span>Services provided by the business:</span>{" "}
-                      {yard.Services.service1}, {yard.Services.service2}
+                      {/* {yard.Services.service1}, {yard.Services.service2} */}
                     </li>
                     <li className="listcontent">
-                      <span>Additional Information:</span>{" "}
-                      {yard.AdditionalInformation}
+                      <span>Additional Information:</span> {yard.description}
                     </li>
                   </ul>
                 </div>

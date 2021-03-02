@@ -14,326 +14,352 @@ import SellCar from "./HomepageItem/SellCar";
 import Twitter from "./HomepageItem/Twitter";
 import ChooseYard from "./HomepageItem/ChooseYard";
 import BlogArticle from "./HomepageItem/BlogArticle/BlogArticle";
+import { Helmet } from "react-helmet";
 const Homepage = () => {
   return (
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-2">
-          <div className="sidebanner">
-            <img src={"./avatars/Banner.png"} className="homeBanner" />
-            <img src={"./avatars/grandebannerAd1.png"} className="homeBanner" />
-            <img src={"./avatars/TahaAuto1.png"} className="homeBanner" />
-            <img
-              src={"./avatars/VicCarRemovalBanner1.png"}
-              className="homeBanner"
-            />
-            <img
-              src={"./avatars/viperbannerad1-1.png"}
-              className="homeBanner"
-            />
-            <img
-              src={"./avatars/WindycityWreckersBanner1.png"}
-              className="homeBanner"
-            />
-            <img src={"./avatars/Banner.png"} className="homeBanner" />
-            <img src={"./avatars/grandebannerAd1.png"} className="homeBanner" />
+    <>
+      <Helmet>
+        <title>Wreckers World - HomePage</title>
+        <meta name="description" content="The world of car" />
+      </Helmet>
 
-            {/* <img
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-2">
+            <div className="sidebanner">
+              <img src={"./avatars/Banner.png"} className="homeBanner" />
+              <img
+                src={"./avatars/grandebannerAd1.png"}
+                className="homeBanner"
+              />
+              <img src={"./avatars/TahaAuto1.png"} className="homeBanner" />
+              <img
+                src={"./avatars/VicCarRemovalBanner1.png"}
+                className="homeBanner"
+              />
+              <img
+                src={"./avatars/viperbannerad1-1.png"}
+                className="homeBanner"
+              />
+              <img
+                src={"./avatars/WindycityWreckersBanner1.png"}
+                className="homeBanner"
+              />
+              <img src={"./avatars/Banner.png"} className="homeBanner" />
+              <img
+                src={"./avatars/grandebannerAd1.png"}
+                className="homeBanner"
+              />
+
+              {/* <img
               src={"./avatars/WindyWreckersSet2.png"}
               className="homeBanner"
             /> */}
-          </div>
-        </div>
-        <div class="col-lg-8 width-md">
-          {/* sell your car in 60 min section */}
-          <div className="homeCarSale">
-            <div className="row">
-              <h2 class="news-heading">Gone in 60 Min </h2>
-            </div>
-            <SellCar />
-          </div>
-          {/* end of sell your car in 60 min section */}
-          <div class="row">
-            <div className="col-lg-10">
-              <h2 class="news-heading">Just Arrived For Wrecking - Bid Now</h2>
-            </div>
-            <div className="col-lg-2">
-              <Link to="/carlisting">
-                {" "}
-                <button type="button" class="homebidbtn">
-                  Bid Now
-                </button>
-              </Link>
             </div>
           </div>
-          <div className="row">
-            <BiddingItem />
-            <BiddingItem />
-            <BiddingItem />
-            <BiddingItem />
-          </div>
-          <div className="homeCarSale">
-            <div className="row">
-              <h2 class="news-heading">Why Choose Us?</h2>
-            </div>
-            <ChooseYard />
-          </div>
-          {/* Wreckers By City section */}
-
-          <Search />
-
-          {/* End of Wreckers By City section */}
-
-          {/* New launch section */}
-          <div class="row newlaunchsection">
-            <div class="col-lg-6">
+          <div class="col-lg-8 width-md">
+            {/* sell your car in 60 min section */}
+            <div className="homeCarSale">
               <div className="row">
-                <h2 class="news-heading">New Launch</h2>
+                <h2 class="news-heading">Gone in 60 Min </h2>
               </div>
+              <SellCar />
+            </div>
+            {/* end of sell your car in 60 min section */}
+            <div class="row">
+              <div className="col-lg-10">
+                <h2 class="news-heading">
+                  Just Arrived For Wrecking - Bid Now
+                </h2>
+              </div>
+              <div className="col-lg-2">
+                <Link to="/carlisting">
+                  {" "}
+                  <button type="button" class="homebidbtn">
+                    Bid Now
+                  </button>
+                </Link>
+              </div>
+            </div>
+            <div className="row">
+              <BiddingItem />
+              <BiddingItem />
+              <BiddingItem />
+              <BiddingItem />
+            </div>
+            <div className="homeCarSale">
+              <div className="row">
+                <h2 class="news-heading">Why Choose Us?</h2>
+              </div>
+              <ChooseYard />
+            </div>
+            {/* Wreckers By City section */}
 
-              <div className="newlaunch">
-                <NewLaunch
-                  url={
-                    "https://api.rss2json.com/v1/api.json?rss_url=https://www.caradvice.com.au/rss/"
-                  }
-                  imageHeight={"300px"}
-                />
-                <div class="row">
-                  <div class="col-lg-6">
-                    <NewLaunch
-                      url={
-                        "https://api.rss2json.com/v1/api.json?rss_url=https://www.bimmerpost.com/feed/"
-                      }
-                    />
+            <Search />
+
+            {/* End of Wreckers By City section */}
+
+            {/* New launch section */}
+            <div class="row newlaunchsection">
+              <div class="col-lg-6">
+                <div className="row">
+                  <h2 class="news-heading">New Launch</h2>
+                </div>
+
+                <div className="newlaunch">
+                  <NewLaunch
+                    url={
+                      "https://api.rss2json.com/v1/api.json?rss_url=https://www.caradvice.com.au/rss/"
+                    }
+                    imageHeight={"300px"}
+                  />
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <NewLaunch
+                        url={
+                          "https://api.rss2json.com/v1/api.json?rss_url=https://www.bimmerpost.com/feed/"
+                        }
+                      />
+                    </div>
+                    <div class="col-lg-6">
+                      <NewLaunch
+                        url={
+                          "https://api.rss2json.com/v1/api.json?rss_url=https://paultan.org/feed/"
+                        }
+                      />
+                    </div>
                   </div>
-                  <div class="col-lg-6">
-                    <NewLaunch
-                      url={
-                        "https://api.rss2json.com/v1/api.json?rss_url=https://paultan.org/feed/"
-                      }
-                    />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div className="row">
+                  <h2 class="news-heading">Vintage</h2>
+                </div>
+                <div className="newlaunch">
+                  <NewLaunch
+                    url={
+                      "https://api.rss2json.com/v1/api.json?rss_url=https://autostyling.wordpress.com/feed/"
+                    }
+                    imageHeight={"300px"}
+                  />
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <NewLaunch
+                        url={
+                          "https://api.rss2json.com/v1/api.json?rss_url=https://www.caranddriver.com/rss/all.xml/"
+                        }
+                      />
+                    </div>
+                    <div class="col-lg-6">
+                      <NewLaunch
+                        url={
+                          "https://api.rss2json.com/v1/api.json?rss_url=https://www.autocar.co.uk/rss/latestnews"
+                        }
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div className="row">
-                <h2 class="news-heading">Vintage</h2>
-              </div>
-              <div className="newlaunch">
+            {/* End of New launch section */}
+
+            {/*  Latest Events section */}
+
+            <div class="row eventsection">
+              <div class="col-lg-4">
                 <NewLaunch
                   url={
-                    "https://api.rss2json.com/v1/api.json?rss_url=https://autostyling.wordpress.com/feed/"
+                    "https://api.rss2json.com/v1/api.json?rss_url=https://www.motor1.com/rss/news/all/"
                   }
-                  imageHeight={"300px"}
                 />
-                <div class="row">
-                  <div class="col-lg-6">
-                    <NewLaunch
-                      url={
-                        "https://api.rss2json.com/v1/api.json?rss_url=https://www.caranddriver.com/rss/all.xml/"
-                      }
-                    />
-                  </div>
-                  <div class="col-lg-6">
-                    <NewLaunch
-                      url={
-                        "https://api.rss2json.com/v1/api.json?rss_url=https://www.autocar.co.uk/rss/latestnews"
-                      }
-                    />
-                  </div>
+                <NewLaunch
+                  url={
+                    "https://api.rss2json.com/v1/api.json?rss_url=https://www.motor1.com/rss/news/all/"
+                  }
+                />
+                <NewLaunch
+                  url={
+                    "https://api.rss2json.com/v1/api.json?rss_url=https://www.motor1.com/rss/news/all/"
+                  }
+                />
+              </div>
+              <div class="col-lg-8">
+                <div className="row">
+                  <h2 className="news-heading">Latest Events</h2>
                 </div>
+                <EventCalendar />
               </div>
             </div>
-          </div>
-          {/* End of New launch section */}
 
-          {/*  Latest Events section */}
+            {/* End of Latest Events section */}
+            {/* Latest News section */}
+            <div class="row newssection">
+              <div class="col-lg-4">
+                <div className="row">
+                  <h2 class="news-heading">Latest News</h2>
+                </div>
 
-          <div class="row eventsection">
-            <div class="col-lg-4">
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=https://www.motor1.com/rss/news/all/"
-                }
-              />
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=https://www.motor1.com/rss/news/all/"
-                }
-              />
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=https://www.motor1.com/rss/news/all/"
-                }
-              />
-            </div>
-            <div class="col-lg-8">
-              <div className="row">
-                <h2 className="news-heading">Latest Events</h2>
+                <NewLaunch
+                  url={
+                    "https://api.rss2json.com/v1/api.json?rss_url=http://www.autoevolution.com/rss/backend.xml"
+                  }
+                />
+                <NewLaunch
+                  url={
+                    "https://api.rss2json.com/v1/api.json?rss_url=http://www.autoevolution.com/rss/backend.xml"
+                  }
+                />
+                <NewLaunch
+                  url={
+                    "https://api.rss2json.com/v1/api.json?rss_url=http://www.autoevolution.com/rss/backend.xml"
+                  }
+                />
               </div>
-              <EventCalendar />
-            </div>
-          </div>
-
-          {/* End of Latest Events section */}
-          {/* Latest News section */}
-          <div class="row newssection">
-            <div class="col-lg-4">
-              <div className="row">
-                <h2 class="news-heading">Latest News</h2>
+              <div class="col-lg-4">
+                <NewLaunch
+                  url={
+                    "https://api.rss2json.com/v1/api.json?rss_url=http://feeds.feedburner.com/BmwBlog"
+                  }
+                />
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the
+                  1960s,remaining essentially unchanged. It was popularised in
+                  the 1960s,remaining essentially unchanged. It was popularised
+                  in the 1960s.
+                </p>
               </div>
-
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=http://www.autoevolution.com/rss/backend.xml"
-                }
-              />
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=http://www.autoevolution.com/rss/backend.xml"
-                }
-              />
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=http://www.autoevolution.com/rss/backend.xml"
-                }
-              />
+              <div class="col-lg-4">
+                <NewLaunch
+                  url={
+                    "https://api.rss2json.com/v1/api.json?rss_url=https://www.bimmerpost.com/feed/"
+                  }
+                />
+                <NewLaunch
+                  url={
+                    "https://api.rss2json.com/v1/api.json?rss_url=https://www.bimmerpost.com/feed/"
+                  }
+                />
+                <NewLaunch
+                  url={
+                    "https://api.rss2json.com/v1/api.json?rss_url=https://www.bimmerpost.com/feed/"
+                  }
+                />
+              </div>
             </div>
-            <div class="col-lg-4">
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=http://feeds.feedburner.com/BmwBlog"
-                }
-              />
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s,remaining essentially unchanged. It was
-                popularised in the 1960s,remaining essentially unchanged. It was
-                popularised in the 1960s.
-              </p>
+            {/* End of Latest News section */}
+            {/* Latest Blog section */}
+            <div class="row blogsection">
+              <div class="col-lg-8" style={{ textAlign: "justify" }}>
+                <BlogArticle />
+              </div>
+              <div class="col-lg-4">
+                <NewLaunch
+                  url={
+                    "https://api.rss2json.com/v1/api.json?rss_url=https://www.autoblog.com/rss.xml"
+                  }
+                />
+                <NewLaunch
+                  url={
+                    "https://api.rss2json.com/v1/api.json?rss_url=https://www.autoblog.com/rss.xml"
+                  }
+                />
+                <NewLaunch
+                  url={
+                    "https://api.rss2json.com/v1/api.json?rss_url=https://www.autoblog.com/rss.xml"
+                  }
+                />
+              </div>
             </div>
-            <div class="col-lg-4">
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=https://www.bimmerpost.com/feed/"
-                }
-              />
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=https://www.bimmerpost.com/feed/"
-                }
-              />
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=https://www.bimmerpost.com/feed/"
-                }
-              />
-            </div>
+            {/* End of Latest Blog section */}
           </div>
-          {/* End of Latest News section */}
-          {/* Latest Blog section */}
-          <div class="row blogsection">
-            <div class="col-lg-8" style={{ textAlign: "justify" }}>
-              <BlogArticle />
-            </div>
-            <div class="col-lg-4">
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=https://www.autoblog.com/rss.xml"
-                }
-              />
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=https://www.autoblog.com/rss.xml"
-                }
-              />
-              <NewLaunch
-                url={
-                  "https://api.rss2json.com/v1/api.json?rss_url=https://www.autoblog.com/rss.xml"
-                }
-              />
-            </div>
-          </div>
-          {/* End of Latest Blog section */}
-        </div>
-        <div class="col-lg-2">
-          <div className="sidebanner">
-            <img src={"./avatars/samirBannerAd1.png"} className="homeBanner" />
-            <img src={"./avatars/Banner1-3.png"} className="homeBanner" />
-            <img
-              src={"./avatars/AliCarRemovalBanner1.png"}
-              className="homeBanner"
-            />
-            <img
-              src={"./avatars/kingautobannerad1.png"}
-              className="homeBanner"
-            />
-            <img src={"./avatars/Banner1-2.png"} className="homeBanner" />
-            <img src={"./avatars/banner11.png"} className="homeBanner" />
-            <img src={"./avatars/Banner.png"} className="homeBanner" />
-            <img src={"./avatars/grandebannerAd1.png"} className="homeBanner" />
-
-            {/* <img src={'./avatars/TahaAutoSet2.png'} style={{height:'auto',width:'100%',marginTop: '20px',padding:'0px'}} /> */}
-          </div>
-        </div>
-      </div>
-
-      {/* Video section */}
-      <Video />
-
-      {/* End of Video section */}
-
-      {/* Inside Wreckers section */}
-      <div className="row processbg">
-        <div className="col-lg-2"></div>
-        <div className="col-lg-8 width-md">
-          <div class="row">
-            <div class="col-md-6">
-              <Process />
-            </div>
-            <div class="col-md-6">
+          <div class="col-lg-2">
+            <div className="sidebanner">
               <img
-                src={"./avatars/ProcessCircle.png"}
-                style={{ height: "100%", width: "100%" }}
+                src={"./avatars/samirBannerAd1.png"}
+                className="homeBanner"
+              />
+              <img src={"./avatars/Banner1-3.png"} className="homeBanner" />
+              <img
+                src={"./avatars/AliCarRemovalBanner1.png"}
+                className="homeBanner"
+              />
+              <img
+                src={"./avatars/kingautobannerad1.png"}
+                className="homeBanner"
+              />
+              <img src={"./avatars/Banner1-2.png"} className="homeBanner" />
+              <img src={"./avatars/banner11.png"} className="homeBanner" />
+              <img src={"./avatars/Banner.png"} className="homeBanner" />
+              <img
+                src={"./avatars/grandebannerAd1.png"}
+                className="homeBanner"
+              />
+
+              {/* <img src={'./avatars/TahaAutoSet2.png'} style={{height:'auto',width:'100%',marginTop: '20px',padding:'0px'}} /> */}
+            </div>
+          </div>
+        </div>
+
+        {/* Video section */}
+        <Video />
+
+        {/* End of Video section */}
+
+        {/* Inside Wreckers section */}
+        <div className="row processbg">
+          <div className="col-lg-2"></div>
+          <div className="col-lg-8 width-md">
+            <div class="row">
+              <div class="col-md-6">
+                <Process />
+              </div>
+              <div class="col-md-6">
+                <img
+                  src={"./avatars/ProcessCircle.png"}
+                  style={{ height: "100%", width: "100%" }}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-2"></div>
+        </div>
+
+        {/* End of Inside wreckers section */}
+        {/* contact section */}
+        <div class="row">
+          <div className="col-lg-2">
+            <div className="sidebanner">
+              <img
+                src={"./avatars/samirBannerAd1.png"}
+                className="homeBanner"
               />
             </div>
           </div>
-        </div>
-        <div className="col-lg-2"></div>
-      </div>
-
-      {/* End of Inside wreckers section */}
-      {/* contact section */}
-      <div class="row">
-        <div className="col-lg-2">
-          <div className="sidebanner">
-            <img src={"./avatars/samirBannerAd1.png"} className="homeBanner" />
-          </div>
-        </div>
-        <div className="col-lg-8 width-md">
-          <Contact />
-          <div className="twitterSection">
-            <div className="row">
-              <h2 class="news-heading">Our Family on Twitter </h2>
+          <div className="col-lg-8 width-md">
+            <Contact />
+            <div className="twitterSection">
+              <div className="row">
+                <h2 class="news-heading">Our Family on Twitter </h2>
+              </div>
+              <Twitter />
             </div>
-            <Twitter />
+          </div>
+          <div className="col-lg-2">
+            <div className="sidebanner">
+              <img src={"./avatars/Banner1-2.png"} className="homeBanner" />
+            </div>
           </div>
         </div>
-        <div className="col-lg-2">
-          <div className="sidebanner">
-            <img src={"./avatars/Banner1-2.png"} className="homeBanner" />
-          </div>
-        </div>
-      </div>
 
-      {/* End of contact section */}
-    </div>
+        {/* End of contact section */}
+      </div>
+    </>
   );
 };
 
